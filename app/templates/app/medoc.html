@@ -1,0 +1,23 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+
+<h2> here's a list of places that could hurt: </h2>
+ <div class="page-header">
+              
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    
+                        <a href="{% url 'head' %}" class="list-group-item">Head*</a>
+                        <a href="#" class="list-group-item">Thorax</a>
+                        <a href="#" class="list-group-item">Bone</a>
+                        <a href="#" class="list-group-item">Muscle</a>
+                        <a href="#" class="list-group-item">Belly</a>
+                    
+                </div></div>
+<h2> Input one of them </h2>
+{% endblock %}
