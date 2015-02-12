@@ -1,0 +1,13 @@
+C:\Users\MDE\documents\visual studio 2013\Projects\WebAppMedoc\WebAppMedoc\bin\Microsoft.PythonTools.WebRole.dll
+C:\Users\MDE\documents\visual studio 2013\Projects\WebAppMedoc\WebAppMedoc\obj\Debug\attach_server.py
+C:\Users\MDE\documents\visual studio 2013\Projects\WebAppMedoc\WebAppMedoc\obj\Debug\visualstudio_py_debugger.py
+C:\Users\MDE\documents\visual studio 2013\Projects\WebAppMedoc\WebAppMedoc\obj\Debug\visualstudio_py_repl.py
+C:\Users\MDE\documents\visual studio 2013\Projects\WebAppMedoc\WebAppMedoc\obj\Debug\visualstudio_py_util.py
+C:\Users\MDE\documents\visual studio 2013\Projects\WebAppMedoc\WebAppMedoc\obj\Debug\__init__.py
+C:\Users\MDE\documents\visual studio 2013\Projects\WebAppMedoc\WebAppMedoc\obj\Debug\__main__.py
+C:\Users\MDE\documents\visual studio 2013\Projects\WebAppMedoc\WebAppMedoc\bin\AzureSetup.cfg
+C:\Users\MDE\documents\visual studio 2013\Projects\WebAppMedoc\WebAppMedoc\bin\Microsoft.PythonTools.AzureSetup.exe
+C:\Users\MDE\documents\visual studio 2013\Projects\WebAppMedoc\WebAppMedoc\bin\Microsoft.PythonTools.AzureSetup.exe.config
+C:\Users\MDE\documents\visual studio 2013\Projects\WebAppMedoc\WebAppMedoc\bin\wfastcgi.py
+C:\Users\MDE\documents\visual studio 2013\Projects\WebAppMedoc\WebAppMedoc\obj\Debug\web.config
+C:\Users\MDE\documents\visual studio 2013\Projects\WebAppMedoc\WebAppMedoc\obj\Debug\web.debug.config

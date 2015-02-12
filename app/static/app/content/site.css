@@ -1,8 +1,24 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-color:#A8A3A3;
-    background-image: linear-gradient( #872c2c, #cdf2ef);
+    background-color: rgb(76, 255, 0);
+    background-image: linear-gradient( rgb(76, 255, 0), #808080);
+}
+
+.nav {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  border-bottom: 3px solid rgb(76,255,0);
+  padding-bottom: 3px;
+}
+
+.jumbotron {
+    background: url("../images/country.JPG") no-repeat center fixed ;
+    -webkit-background-size: cover; /* pour Chrome et Safari */
+    -moz-background-size: cover; /* pour Firefox */
+    -o-background-size: cover; /* pour Opera */
+    background-size: cover; /* version standardisée */
 }
 
 /* Set padding to keep content from hitting the edges */
