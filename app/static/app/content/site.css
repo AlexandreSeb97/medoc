@@ -2,30 +2,31 @@
     padding-top: 50px;
     padding-bottom: 20px;
     background-color: rgb(149, 225, 110);
-
-    background-image: linear-gradient( rgb(149, 225, 110), #d3e8b4);
-
-
+<<<<<<< HEAD
+    background-image: linear-gradient( rgb(149, 225, 110), #808080);
+=======
+    background-image: linear-gradient( rgba(149, 225, 110), #808080);
+>>>>>>> origin/master
 }
 
 .nav {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
-
+<<<<<<< HEAD
   border-bottom: 3px solid rgba(89, 121, 73, 0.74);
   padding-bottom: 3px;
 }
 
 .lead
 {
-
-  border-bottom: 3px solid rgba(89, 121, 73, 0.74);
+=======
+  border-bottom: 3px solid rgba(89, 121, 73, 0.74));
   padding-bottom: 3px;
 }
 
 .lead {
-
+>>>>>>> origin/master
     color: white;
 }
 
