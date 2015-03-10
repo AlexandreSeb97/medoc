@@ -13,7 +13,6 @@
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
-<<<<<<< HEAD
   border-bottom: 3px solid rgba(89, 121, 73, 0.74);
   padding-bottom: 3px;
 }
@@ -26,8 +25,7 @@
 }
 
 .lead {
->>>>>>> origin/master
-    color: white;
+	color: white;
 }
 
 .jumbotron {
