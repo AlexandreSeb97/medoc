@@ -3,7 +3,6 @@ Django settings for WebAppMedoc project.
 """
 
 from os import path
-from WebAppMedoc.settings import dj_database_url
 PROJECT_ROOT = path.dirname(path.abspath(path.dirname(__file__)))
 
 DEBUG = True
