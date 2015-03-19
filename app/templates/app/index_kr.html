@@ -1,0 +1,38 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>MeDOC</h1>
+    <p class="lead">Yo kreye app sa a avek Django ak Python. </p>
+
+    <p><a class="btn btn-default" href="{% url 'medoc' %}">Ann Ale! &raquo;</a></p>
+	<br /><br />
+	<h6> Photo by Alexandre </h6>
+    
+</div>
+
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Django</h2>
+        <p>
+            Ranseye w' sou Django.
+        </p>
+        <p><a href="https://www.djangoproject.com/" class="btn btn-primary btn-large">Ranseye w' sou Django &raquo;</a></p>
+        
+    </div>
+    <div class="col-md-4">
+        <h2>Contact Us!</h2>
+        <p>Pran kontak ak devlopè yo </p>
+        <p><a class="btn btn-default" href="{% url 'contact' %}">Kontak &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>About</h2>
+        <p>Ranseye w' sou app la</p>
+        <p><a class="btn btn-default" href="{% url 'about' %}">A pwopo &raquo;</a></p>
+    </div>
+</div>
+
+
+{% endblock %}
