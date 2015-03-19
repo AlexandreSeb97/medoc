@@ -20,8 +20,8 @@ def home(request):
         })
     )
 
-def home_en(request):
-    """Renders the home page."""
+def en(request):
+    """Renders english home page."""
     assert isinstance(request, HttpRequest)
     return render(
         request,
@@ -33,8 +33,8 @@ def home_en(request):
         })
     )
 
-def home_fr(request):
-    """Renders the home page."""
+def fr(request):
+    """Renders french home page."""
     assert isinstance(request, HttpRequest)
     return render(
         request,
@@ -46,8 +46,8 @@ def home_fr(request):
         })
     )
 
-def home_kr(request):
-    """Renders the home page."""
+def kr(request):
+    """Renders creole home page."""
     assert isinstance(request, HttpRequest)
     return render(
         request,
