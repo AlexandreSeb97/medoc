@@ -22,3 +22,5 @@ C:\Users\MDE\medoc\bin\AzureSetup.cfg
 C:\Users\MDE\medoc\bin\Microsoft.PythonTools.AzureSetup.exe
 C:\Users\MDE\medoc\bin\Microsoft.PythonTools.AzureSetup.exe.config
 C:\Users\MDE\medoc\bin\wfastcgi.py
+C:\Users\MDE\medoc\obj\Debug\deployment-updated-orig-prefix.txt
+C:\Users\MDE\medoc\ptvs_virtualenv_proxy.py
