@@ -50,6 +50,7 @@
     <Folder Include="WebAppMedoc\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\templates\app\index_choose.html" />
     <Content Include="app\templates\app\medoc.html" />
     <Content Include="app\templates\app\head.html" />
     <Content Include="requirements.txt" />

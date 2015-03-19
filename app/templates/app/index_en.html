@@ -1,0 +1,39 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>MeDOC</h1>
+    <p class="lead">This app has been created with Django and Python. Click on icon below to start. </p>
+
+    <p><a class="btn btn-default" href="{% url 'medoc' %}">Get Started &raquo;</a></p>
+	<br /><br />
+	<h6> Photo by Alexandre </h6>
+    
+</div>
+
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Django</h2>
+        <p>
+            Learn more about Django.
+        </p>
+        <p><a href="https://www.djangoproject.com/" class="btn btn-primary btn-large">Learn more about Django&raquo;</a></p>
+        
+    </div>
+    <div class="col-md-4">
+        <h2>Contact Us!</h2>
+        <p>Contact information about the developers.</p>
+        <p><a class="btn btn-default" href="{% url 'contact' %}">Contact &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>About</h2>
+        <p>Learn about our app</p>
+        <p><a class="btn btn-default" href="{% url 'about' %}">About &raquo;</a></p>
+    </div>
+</div>
+
+
+{% endblock %}
+
