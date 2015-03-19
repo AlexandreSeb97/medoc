@@ -25,7 +25,7 @@ def en(request):
     assert isinstance(request, HttpRequest)
     return render(
         request,
-        'app/index_en.html',
+        'app/page_en.html',
         context_instance = RequestContext(request,
         {
             'title':'Home Page',
@@ -38,7 +38,7 @@ def fr(request):
     assert isinstance(request, HttpRequest)
     return render(
         request,
-        'app/index_fr.html',
+        'app/page_fr.html',
         context_instance = RequestContext(request,
         {
             'title':"Page d'accueil",
@@ -51,7 +51,7 @@ def kr(request):
     assert isinstance(request, HttpRequest)
     return render(
         request,
-        'app/index_kr.html',
+        'app/page_kr.html',
         context_instance = RequestContext(request,
         {
             'title':'Onè'
