@@ -15,9 +15,6 @@ urlpatterns = patterns('',
     # Examples:
     
     url(r'^$', 'app.views.home', name='home'),
-	url(r'^$', 'app.views.en', name='en'),
-	url(r'^$', 'app.views.kr', name='kr'),
-	url(r'^$', 'app.views.fr', name='fr'),
     url(r'^contact$', 'app.views.contact', name='contact'),
     url(r'^about', 'app.views.about', name='about'),
     url(r'^login/$',
@@ -40,6 +37,9 @@ urlpatterns = patterns('',
         name='logout'),
     url(r'^head$', 'app.views._head', name='head'),
     url(r'^medoc$', 'app.views.medoc', name='medoc'),
+	url(r'^en', 'app.views._en', name='en'),
+	url(r'^kr', 'app.views._kr', name='kr'),
+	url(r'^fr', 'app.views._fr', name='fr'),
     
 
     # Uncomment the admin/doc line below to enable admin documentation:

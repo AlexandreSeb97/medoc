@@ -22,10 +22,12 @@
 
   border-bottom: 3px solid rgba(89, 121, 73, 0.74);
   padding-bottom: 3px;
+  color: white;
 }
 
-.lead {
-	color: white;
+h2
+{
+	color: MintCream;
 }
 
 .jumbotron {
@@ -34,6 +36,7 @@
     -moz-background-size: cover; /* pour Firefox */
     -o-background-size: cover; /* pour Opera */
     background-size: cover; /* version standardisée */
+    text-align: center;
 }
 
 /* Set padding to keep content from hitting the edges */

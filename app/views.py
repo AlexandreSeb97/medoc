@@ -20,7 +20,7 @@ def home(request):
         })
     )
 
-def en(request):
+def _en(request):
     """Renders english home page."""
     assert isinstance(request, HttpRequest)
     return render(
@@ -33,12 +33,12 @@ def en(request):
         })
     )
 
-def fr(request):
+def _fr(request):
     """Renders french home page."""
     assert isinstance(request, HttpRequest)
     return render(
         request,
-        'app/page_fr.html',
+        'app/fr/page_fr.html',
         context_instance = RequestContext(request,
         {
             'title':"Page d'accueil",
@@ -46,18 +46,19 @@ def fr(request):
         })
     )
 
-def kr(request):
-    """Renders creole home page."""
-    assert isinstance(request, HttpRequest)
-    return render(
-        request,
-        'app/page_kr.html',
-        context_instance = RequestContext(request,
-        {
-            'title':'Onè'
-            'year':datetime.now().year,
-        })
-    )	
+def _kr(request):
+	"""Renders creole home page."""
+	assert isinstance(request, HttpRequest)
+	return render(
+		request,
+		'app/kr/page_kr.html',
+		context_instance = RequestContext(request,
+		{
+			'title':'Paj Akey',
+			'year':datetime.now().year,
+		})
+	)
+	
 	
 def contact(request):
     """Renders the contact page."""

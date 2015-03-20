@@ -1,20 +1,20 @@
-﻿{% extends "app/layout.html" %}
+﻿{% extends "app/layout_home.html" %}
 
 {% block content %}
 
 
-    <p>Hello!</p>
+
     <div class="jumbotron">
         <h1> MeDOC </h1>
-        <h1> Choose your language </h1>
-        <p class="lead"> Welcome to MeDOC </p>
+        <h2 class="language"> Choose your language </h2>
+        <h3 class="lead"> Welcome to MeDOC </h3>
             <p><a class="btn btn-default" href="{% url 'en' %}"> English &raquo;</a></p>
-        <h1> Choisissez votre langue </h1>
-        <p class="lead"> Bienvenue sur MeDOC</p>
-            <p><a class="btn btn-default" href="{% url 'fr' %}"> French not available </a></p>
-        <h1> Chwazi lang ou pale a </h1>
-        <p class="lead"> Byenvini sou MeDOC </p>
-            <p><a class="btn btn-default" href="{% url 'kr' %}"> Kreyol not available </a></p>
+        <h2 class="language"> Choisissez votre langue </h2>
+        <h3 class="lead"> Bienvenue sur MeDOC</h3>
+            <p><a class="btn btn-default" href="{% url 'fr' %}"> French &raquo;</a></p>
+        <h2 class="language"> Chwazi lang ou pale a </h2>
+        <h3 class="lead"> Byenvini sou MeDOC </h3>
+            <p><a class="btn btn-default" href="{% url 'kr' %}"> Kreyol &raquo;</a></p>
     </div>
 
 
