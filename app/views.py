@@ -74,6 +74,34 @@ def contact(request):
         })
     )
 
+def contact_kr(request):
+    """Renders the contact page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/kr/contact_kr.html',
+        context_instance = RequestContext(request,
+        {
+            'title':'Kontak',
+            'message':"App lan ap baw edek? Kontakte n'!",
+            'year':datetime.now().year,
+        })
+    )
+
+def contact_fr(request):
+    """Renders the contact page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/fr/contact_fr.html',
+        context_instance = RequestContext(request,
+        {
+            'title':'Contact',
+            'message':"L'app vous pose des problemes? Contactez nous!",
+            'year':datetime.now().year,
+        })
+    )
+
 def about(request):
     """Renders the about page."""
     assert isinstance(request, HttpRequest)
@@ -84,6 +112,34 @@ def about(request):
         {
             'title':'About',
             'message':'What is MeDoc?',
+            'year':datetime.now().year,
+        })
+    )
+
+def about_kr(request):
+    """Renders the about page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/kr/about_kr.html',
+        context_instance = RequestContext(request,
+        {
+            'title':'A Pwopo',
+            'message':'Kisa ki MeDOC?',
+            'year':datetime.now().year,
+        })
+    )
+
+def about_fr(request):
+    """Renders the about page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/kr/about_fr.html',
+        context_instance = RequestContext(request,
+        {
+            'title':'A Propos',
+            'message':"Qu'est ce que MeDOC?",
             'year':datetime.now().year,
         })
     )
@@ -116,3 +172,58 @@ def _head(request):
         })
     )
 
+def medoc_kr(request):
+    """Renders the app page"""
+    assert isinstance(request, HttpRequest)
+    return render(
+       request,
+       'app/kr/medoc_kr.html',
+       context_instance = RequestContext(request,
+        {
+            'title':'Medoc',
+            'message':"Koman w' santi w' jodia?",
+            'year':datetime.now().year,
+        })
+    )
+
+def medoc_fr(request):
+    """Renders the app page"""
+    assert isinstance(request, HttpRequest)
+    return render(
+       request,
+       'app/fr/medoc_fr.html',
+       context_instance = RequestContext(request,
+        {
+            'title':'Medoc',
+            'message':"Comment vous sentez vous aujourd'hui?",
+            'year':datetime.now().year,
+        })
+    )
+
+def head_kr(request):
+    """Renders the head page"""
+    assert isinstance(request, HttpRequest)
+    return render(
+       request,
+       'app/kr/head_kr.html',
+       context_instance = RequestContext(request,
+        {
+            'title':'Tet',
+            'message':"Pran swen ko w'!",
+            'year':datetime.now().year,
+        })
+    )
+
+def head_fr(request):
+    """Renders the head page"""
+    assert isinstance(request, HttpRequest)
+    return render(
+       request,
+       'app/fr/head_fr.html',
+       context_instance = RequestContext(request,
+        {
+            'title':'Tete',
+            'message':"Portez vous bien!",
+            'year':datetime.now().year,
+        })
+    )

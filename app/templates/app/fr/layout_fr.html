@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -19,14 +19,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="/" class="navbar-brand">MeDOC</a>
+                <a href="{% url 'fr' %}" class="navbar-brand">MeDOC</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="{% url 'fr' %}">Accueil</a></li>
-                    <li><a href="{% url 'about' %}">A propos</a></li>
-                    <li><a href="{% url 'contact' %}">Contact</a></li>
-                    <li><a href="{% url 'medoc' %}">MeDOC App</a></li>
+                    <li><a href="{% url 'about_fr' %}">A propos</a></li>
+                    <li><a href="{% url 'contact_fr' %}">Contact</a></li>
+                    <li><a href="{% url 'medoc_fr' %}">MeDOC App</a></li>
 					<li><a href="{% url 'home' %}">Changer de Langue</a></li>
                 </ul>
                 {% include 'app/loginpartial.html' %}
