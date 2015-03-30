@@ -17,6 +17,7 @@ def home(request):
         {
             'title':'Language',
             'year':datetime.now().year,
+			'date':datetime.now().date,
         })
     )
 
@@ -30,6 +31,7 @@ def _en(request):
         {
             'title':'Home Page',
             'year':datetime.now().year,
+			'date':datetime.now(),
         })
     )
 
@@ -43,6 +45,7 @@ def _fr(request):
         {
             'title':"Page d'accueil",
             'year':datetime.now().year,
+			'date':datetime.now(),
         })
     )
 
@@ -56,6 +59,7 @@ def _kr(request):
 		{
 			'title':'Paj Akey',
 			'year':datetime.now().year,
+			'date':datetime.now(),
 		})
 	)
 	
@@ -227,3 +231,4 @@ def head_fr(request):
             'year':datetime.now().year,
         })
     )
+	

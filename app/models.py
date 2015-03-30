@@ -11,4 +11,4 @@ class Doctor(models.Model):
 	adresse = models.TextField(null=True)
 	email = models.EmailField(max_length=254)
 	phone_number = models.CharField(max_length=16)
-         
+	anecdote = models.TextField(null=True)    
