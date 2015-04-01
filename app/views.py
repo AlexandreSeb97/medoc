@@ -115,7 +115,7 @@ def about(request):
         context_instance = RequestContext(request,
         {
             'title':'About',
-            'message':'What is MeDoc?',
+            'message':"What's up Doc?",
             'year':datetime.now().year,
         })
     )
@@ -129,7 +129,7 @@ def about_kr(request):
         context_instance = RequestContext(request,
         {
             'title':'A Pwopo',
-            'message':'Kisa ki MeDOC?',
+            'message':"Sa k'ap fet Doc la?",
             'year':datetime.now().year,
         })
     )
@@ -143,7 +143,7 @@ def about_fr(request):
         context_instance = RequestContext(request,
         {
             'title':'A Propos',
-            'message':"Qu'est ce que MeDOC?",
+            'message':"Bonjour Doc!",
             'year':datetime.now().year,
         })
     )
