@@ -139,7 +139,7 @@ def about_fr(request):
     assert isinstance(request, HttpRequest)
     return render(
         request,
-        'app/kr/about_fr.html',
+        'app/fr/about_fr.html',
         context_instance = RequestContext(request,
         {
             'title':'A Propos',
