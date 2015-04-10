@@ -1,11 +1,39 @@
 """
 Definition of views.
 """
-
+from django.http import Http404
 from django.shortcuts import render
 from django.http import HttpRequest
 from django.template import RequestContext
 from datetime import datetime
+from app.models import Doctor
+from app.models import Hospital
+
+def hospital(request):
+    """ Afficher tous les hopitaux de notre blog """
+    hospital = Hospital.objects.all() # Nous sélectionnons tous nos hopitaux
+    return render(request, 'app/hospitals.html', {'hospitals': hospital})
+    """Renders the hospital page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/hospitals.html',
+        context_instance = RequestContext(request,
+        {
+            'title':'Hospitals',
+			'message':'List of all Hospitals in MeDOC',
+            'year':datetime.now().year,
+        })
+    )
+	
+def info(request, id):
+	"""Renders full hospital infos."""
+	try:
+		hospital = Hospital.objects.get(id=id)
+	except Hospital.DoesNotExist:
+		raise Http404
+	return render(request, 'blog/info.html', {'hospitals': hospital})
+
 
 def home(request):
     """Renders the home page."""
@@ -20,6 +48,8 @@ def home(request):
 			'date':datetime.now().date,
         })
     )
+
+	
 
 def _en(request):
     """Renders english home page."""

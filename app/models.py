@@ -12,3 +12,10 @@ class Doctor(models.Model):
 	email = models.EmailField(max_length=254)
 	phone_number = models.CharField(max_length=16)
 	anecdote = models.TextField(null=True)    
+	
+class Hospital(models.Model):
+	nom = models.CharField(max_length=200)
+	adresse = models.TextField(null=True)
+	email = models.EmailField(max_length=254)
+	phone_number = models.CharField(max_length=16)
+	specialite = models.CharField(max_length=50)
