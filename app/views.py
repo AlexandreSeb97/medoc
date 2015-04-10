@@ -11,7 +11,7 @@ from app.models import Hospital
 
 def hospital(request):
     """ Afficher tous les hopitaux de notre blog """
-    hospital = Hospital.objects.all() # Nous sélectionnons tous nos hopitaux
+    hospital = Hospital.objects.all() 
     return render(request, 'app/hospitals.html', {'hospitals': hospital})
     """Renders the hospital page."""
     assert isinstance(request, HttpRequest)
