@@ -1,0 +1,29 @@
+{% extends "app/fr/layout_fr.html" %}
+
+{% block content %}
+
+<h2>{{ title }}</h2>
+<h3>{{ message }}</h3>
+
+<div class="panel panel-primary">
+	<div class="panel-heading">
+	    <h3 class="panel-title">Hopitaux</h3>
+	</div>
+	<div class="panel-body">
+
+{% for hospital in hospitals %}
+	<div class="Hospital">
+    	<h3>{{ hospital.nom }}</h3>
+    	<p>{{ hospital.quartier }} --- {{ hospital.adresse }}</p>
+		<p>{{ hospital.phone_number }}</p>
+    </div>
+{% empty %}
+    <p>Aucun autre hopital.</p>
+{% endfor %}
+
+</div>
+</div>
+</div>
+
+
+{% endblock %}

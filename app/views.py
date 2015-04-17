@@ -26,6 +26,40 @@ def hospital(request):
         })
     )
 	
+def hospital_fr(request):
+    """ Afficher tous les hopitaux de notre blog """
+    hospital = Hospital.objects.all() 
+    return render(request, 'app/hospitals.html', {'hospitals': hospital})
+    """Renders the hospital page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/fr/hospitals_fr.html',
+        context_instance = RequestContext(request,
+        {
+            'title':'Hospitals',
+			'message':'List of all Hospitals in MeDOC',
+            'year':datetime.now().year,
+        })
+    )
+	
+def hospital_kr(request):
+    """ Afficher tous les hopitaux de notre blog """
+    hospital = Hospital.objects.all() 
+    return render(request, 'app/hospitals.html', {'hospitals': hospital})
+    """Renders the hospital page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/kr/hospitals_kr.html',
+        context_instance = RequestContext(request,
+        {
+            'title':'Hospitals',
+			'message':'List of all Hospitals in MeDOC',
+            'year':datetime.now().year,
+        })
+    )
+	
 def info(request, id):
 	"""Renders full hospital infos."""
 	try:
