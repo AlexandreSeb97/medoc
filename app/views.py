@@ -29,7 +29,7 @@ def hospital(request):
 def hospital_fr(request):
     """ Afficher tous les hopitaux de notre blog """
     hospital = Hospital.objects.all() 
-    return render(request, 'app/hospitals.html', {'hospitals': hospital})
+    return render(request, 'app/fr/hospitals_fr.html', {'hospitals': hospital})
     """Renders the hospital page."""
     assert isinstance(request, HttpRequest)
     return render(
@@ -46,7 +46,7 @@ def hospital_fr(request):
 def hospital_kr(request):
     """ Afficher tous les hopitaux de notre blog """
     hospital = Hospital.objects.all() 
-    return render(request, 'app/hospitals.html', {'hospitals': hospital})
+    return render(request, 'app/kr/hospitals_kr.html', {'hospitals': hospital})
     """Renders the hospital page."""
     assert isinstance(request, HttpRequest)
     return render(
