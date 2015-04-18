@@ -29,7 +29,7 @@ body {
 
   background-color: rgb(149, 225, 110);
    background-image: linear-gradient( rgb(149, 225, 110), #808080);
-      background: url("../images/country2.JPG") no-repeat center fixed ;
+      background: url("../images/country.JPG") no-repeat center fixed ;
 }
 body {
   color: #fff;
@@ -66,22 +66,26 @@ body {
 .masthead-brand {
   margin-top: 10px;
   margin-bottom: 10px;
+  
 }
 
 .masthead-nav > li {
   display: inline-block;
+ 
 }
 .masthead-nav > li + li {
   margin-left: 20px;
+  
 }
 .masthead-nav > li > a {
   padding-right: 0;
   padding-left: 0;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   color: #fff; /* IE8 proofing */
   color: rgba(255,255,255,.75);
   border-bottom: 2px solid transparent;
+
 }
 .masthead-nav > li > a:hover,
 .masthead-nav > li > a:focus {
