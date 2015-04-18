@@ -1,23 +1,53 @@
 ﻿{% extends "app/layout_home.html" %}
 
 {% block content %}
+  <body>
 
+    <div class="site-wrapper">
 
+      <div class="site-wrapper-inner">
 
-    <div class="jumbotron">
-		<p class="lead">  {{date}} </p><br />
-        <h1> MeDOC </h1>
-        <h2 class="language"> Choose your language </h2>
-        <h3 class="lead"> Welcome to MeDOC </h3>
-            <p><a class="btn btn-default" href="{% url 'en' %}"> English &raquo;</a></p>
-        <h2 class="language"> Choisissez votre langue </h2>
-        <h3 class="lead"> Bienvenue sur MeDOC</h3>
-            <p><a class="btn btn-default" href="{% url 'fr' %}"> French &raquo;</a></p>
-        <h2 class="language"> Chwazi lang ou pale a </h2>
-        <h3 class="lead"> Byenvini sou MeDOC </h3>
-            <p><a class="btn btn-default" href="{% url 'kr' %}"> Kreyol &raquo;</a></p>
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">MeDOC</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li class="active"><a href="{% url 'en' %}">English</a></li>
+                  <li><a href="{%url 'fr' %}">Francais</a></li>
+                  <li><a href="{% url 'kr' %}">Kreyol</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="inner cover">
+            <h1 class="cover-heading">MeDOC</h1>
+            <p class="lead">Welcome to MeDOC, choose a language</p>
+            <p class="lead">
+              <a href="{% url 'about' %}" class="btn btn-lg btn-default">Learn more About Us</a>
+            </p>
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>{% endblock %}</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
-	
 
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+ 
 
-{% endblock %}
