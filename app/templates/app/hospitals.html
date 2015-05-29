@@ -57,7 +57,7 @@
         {
           var positionOptions = {
             enableHighAccuracy: true,
-            timeout: 10 * 1000 // 10 seconds
+            timeout: 100 * 10000 // 10 seconds
           };
           navigator.geolocation.getCurrentPosition(geolocationSuccess, geolocationError, positionOptions);
         }
