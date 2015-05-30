@@ -9,58 +9,90 @@
         padding: 0px
       }
     </style>
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&libraries=places"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places,v=3.exp&signed_in=true"></script>
     <script>
 var map;
+var service;
+var marker;
+var pos;
 var infowindow;
 
-function initialize() {
-  var pap = new google.maps.LatLng(18.5790371,-72.2844277);
+function initialize() 
+{
 
-  map = new google.maps.Map(document.getElementById('map-canvas'), {
-    center: pap,
-    zoom: 13
-  });
+    var mapOptions = {
+     zoom: 13,
+     mapTypeId: google.maps.MapTypeId.ROADMAP,
+     scrollwheel: true,
+     panControl: false,
+     streetViewControl: false,
+     mapTypeControl: false,
+     };
 
-  var request = {
-    location: pap,
-    radius: 5000,
-    types: ['hospital']
-  };
-  infowindow = new google.maps.InfoWindow();
-  var service = new google.maps.places.PlacesService(map);
-  service.nearbySearch(request, callback);
-}
+    map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-function callback(results, status) {
-  if (status == google.maps.places.PlacesServiceStatus.OK) {
-    for (var i = 0; i < results.length; i++) {
-      createMarker(results[i]);
+    //HTML5 geolocation
+    if (navigator.geolocation) 
+    {
+       navigator.geolocation.getCurrentPosition(function(position) 
+       {
+            pos = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+
+            infowindow = new google.maps.InfoWindow({map: map,position: pos,content: 'You are Here!'});
+
+            var request = {location:pos,radius:2000,types: ['hospital']};
+
+            map.setCenter(pos);
+
+            infowindow = new google.maps.InfoWindow();
+            var service = new google.maps.places.PlacesService(map);
+            service.nearbySearch(request,callback);
+
+        }, 
+
+        function() 
+        { 
+        handleNoGeolocation(true);
+        });
+    } 
+    else 
+    {
+    handleNoGeolocation(false);
     }
-  }
-}
 
-function createMarker(place) {
-  var placeLoc = place.geometry.location;
-  var marker = new google.maps.Marker({
-    map: map,
-    position: place.geometry.location
-  });
+    function callback(results, status) 
+    {
+      if (status == google.maps.places.PlacesServiceStatus.OK) 
+      {
+        for (var i = 0; i < results.length; i++) 
+        {
+          createMarker(results[i]);
+        }
+      }
+    }
 
-  google.maps.event.addListener(marker, 'click', function() {
+    function createMarker(place) 
+    {
+      var placeLoc = place.geometry.location;
+      var marker = new google.maps.Marker({
+        map: map,
+        position: place.geometry.location
+      });
+
+    google.maps.event.addListener(marker, 'click', function() 
+    {
     infowindow.setContent(place.name);
     infowindow.open(map, this);
-  });
+    });
+
 }
-
+}
 google.maps.event.addDomListener(window, 'load', initialize);
-
     </script>
   </head>
   <body>
 
     <div id="map-canvas"></div>
-    <p><b>Address</b>: <span id="address"></span></p>
     <p id="error"></p>
 
 
