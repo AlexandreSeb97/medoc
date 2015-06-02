@@ -5,6 +5,12 @@
     background-image: linear-gradient( rgb(149, 225, 110), #808080);
 }
 
+
+.hospital {
+  color : #428bca;
+  background-color: white;
+}
+
 .nav {
   padding-left: 0;
   margin-bottom: 0;

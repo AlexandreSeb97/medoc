@@ -133,7 +133,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app',
-    'WebAppMedoc',
+    # If you ever encounter an error concerning here m8, add WebAppMedoc to the Installed apps
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
