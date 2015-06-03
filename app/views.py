@@ -37,7 +37,7 @@ def hospital_fr(request):
         'app/fr/hospitals_fr.html',
         context_instance = RequestContext(request,
         {
-            'title':'Hospitals',
+            'title':'Hospitaux',
 			'message':'List of all Hospitals in MeDOC',
             'year':datetime.now().year,
         })
@@ -54,7 +54,7 @@ def hospital_kr(request):
         'app/kr/hospitals_kr.html',
         context_instance = RequestContext(request,
         {
-            'title':'Hospitals',
+            'title':'Lopital',
 			'message':'List of all Hospitals in MeDOC',
             'year':datetime.now().year,
         })
