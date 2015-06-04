@@ -107,7 +107,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
   	<div class="Hospital">
         
         <h3> {{ hospital.nom }}</h3>
-        <p>{{ hospital.quartier }} --- {{ hospital.adresse }}</p>
+        <p> {{ hospital.adresse }} --- Phone: {{ hospital.phone_number }}</p>
     {% endif %}
 {% endfor %}
 <h1 class ="hospital"> In Canape-Vert </h1>
@@ -115,8 +115,8 @@ google.maps.event.addDomListener(window, 'load', initialize);
   {% if hospital.quartier == "Canapé-Vert" %}
   	<div class="Hospital">
         
-        <h3> {{ hospital.nom }}</h3>
-        <p>{{ hospital.quartier }} --- {{ hospital.adresse }}</p>
+   <h3> {{ hospital.nom }}</h3>
+        <p> {{ hospital.adresse }} --- Phone: {{ hospital.phone_number }}</p>
     {% endif %}
 {% endfor %}
 <h1 class ="hospital"> In Turgeau </h1>
@@ -124,8 +124,8 @@ google.maps.event.addDomListener(window, 'load', initialize);
   {% if hospital.quartier == "Turgeau" %}
   	<div class="Hospital">
         
-        <h3> {{ hospital.nom }}</h3>
-        <p>{{ hospital.quartier }} --- {{ hospital.adresse }}</p>
+<h3> {{ hospital.nom }}</h3>
+        <p> {{ hospital.adresse }} --- Phone: {{ hospital.phone_number }}</p>
     {% endif %}
 {% endfor %}
 <h1 class ="hospital"> In Pacot </h1>
@@ -133,8 +133,8 @@ google.maps.event.addDomListener(window, 'load', initialize);
   {% if hospital.quartier == "Pacot" %}
   	<div class="Hospital">
         
-        <h3> {{ hospital.nom }}</h3>
-        <p>{{ hospital.quartier }} --- {{ hospital.adresse }}</p>
+<h3> {{ hospital.nom }}</h3>
+        <p> {{ hospital.adresse }} --- Phone: {{ hospital.phone_number }}</p>
     {% endif %}
 {% endfor %}
 <h1 class ="hospital"> In Fermathe </h1>
@@ -142,8 +142,8 @@ google.maps.event.addDomListener(window, 'load', initialize);
   {% if hospital.quartier == "Fermathe" %}
   	<div class="Hospital">
         
-        <h3> {{ hospital.nom }}</h3>
-        <p>{{ hospital.quartier }} --- {{ hospital.adresse }}</p>
+<h3> {{ hospital.nom }}</h3>
+        <p> {{ hospital.adresse }} --- Phone: {{ hospital.phone_number }}</p>
     {% endif %}
 {% endfor %}
 <h1 class ="hospital"> In Centre-Ville PAP </h1>
@@ -151,8 +151,17 @@ google.maps.event.addDomListener(window, 'load', initialize);
   {% if hospital.quartier == "Centre-Ville Port-au-Prince" %}
   	<div class="Hospital">
         
-        <h3> {{ hospital.nom }}</h3>
-        <p>{{ hospital.quartier }} --- {{ hospital.adresse }}</p>
+<h3> {{ hospital.nom }}</h3>
+        <p> {{ hospital.adresse }} --- Phone: {{ hospital.phone_number }}</p>
+    {% endif %}
+{% endfor %}
+<h1 class ="hospital"> In Bois-Verna </h1>
+{% for hospital in hospitals %}
+  {% if hospital.quartier == "Bois-Verna" %}
+  	<div class="Hospital">
+        
+ <h3> {{ hospital.nom }}</h3>
+        <p> {{ hospital.adresse }} --- Phone: {{ hospital.phone_number }}</p>
     {% endif %}
 {% endfor %}
 

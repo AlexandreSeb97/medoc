@@ -1,23 +1,53 @@
 {% extends "app/en/layout_en.html" %}
 
 {% block content %}
-
+{% load staticfiles %}
 <h2>{{ title }}</h2>
 <h3>{{ message }}</h3>
 
-<address>
+
+<p>&nbsp;</p>
+<table class="bodydiv">
+	<tr>
+	
+	<th class="th_contact010">
+	<img src="{% static 'app/images/map.jpg' %}" width="100px" height="100px"/></th>
+	<th>&nbsp;</th>
+	<th>&nbsp;</th>
+	<th class="th_contact011">
+	<img src="{% static 'app/images/@.png' %}" width="100px" height="100px"/></th>
+	<th>&nbsp;</th>
+	<th>&nbsp;</th>
+	</tr>
+	<tr>
+	<th class="th_contact02">
+	<i><h2>ADRESSE</h2></i>
+	<p>&nbsp;</p>
+	<address>
     Institution Saint-Louis de Gonzague<br />
     Port-au-Prince, HT Delmas 31<br />
     <abbr title="Phone">P:</abbr>
     509.3125.3334
 </address>
-
-<br /><h2> EMAIL </h2>
-<address>
-	<h3> You can contact us at one of these emails and we will try to answer you the fastest as possible </h2>
+	<th>&nbsp;</th>
+	<th>&nbsp;</th><br />
+	<th class="th_contact02">
+	<i><h2> EMAIL </h2></i>
+	<p>&nbsp;</p>
+	<address>
+	<p> You can contact us at one of these emails and we will try to answer you the fastest as possible </p>
     <strong>Support:</strong>   <a href="mailto:erichaitian97@gmail.com">erichaitian97@gmail.com</a><br />
  <strong>Support:</strong>   <a href="mailto:vales0797@gmail.com">vales0797@gmail.com</a><br />
   <strong>Support:</strong>   <a href="mailto:patrickjuniora@yahoo.fr">patrickjuniora@yahoo.fr</a><br />
 </address>
+	<th>&nbsp;</th>
+	<th>&nbsp;</th>
+	
+	</tr>
+</table>
+	<p>&nbsp;</p>
+
+<br />
+
 <br /><br /><br /><br /><br />
 {% endblock %}
