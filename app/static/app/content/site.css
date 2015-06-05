@@ -2,7 +2,7 @@
     padding-top: 50px;
     padding-bottom: 20px;
     background-color: rgb(149, 225, 110);
-    background-image: linear-gradient( rgb(149, 225, 110), #808080);
+    background-image: radial-gradient(rgb(149, 225, 110), #808080);
 }
 
 .th_contact010
@@ -34,8 +34,14 @@ font:calibri;
 }
 
 .hospital {
-  color : #428bca;
+  color : #2d4026;
   background-color: white;
+}
+
+.panel-primary > .panel-heading {
+  color: #ffffff;
+  background-color: #2d4026;
+  border-color: #2d4026;
 }
 
 .nav {
