@@ -28,7 +28,7 @@ html,
 body {
 
   background-color: rgb(149, 225, 110);
-   background-image: linear-gradient( rgb(149, 225, 110), #808080);
+   background-image:  radial-gradient(rgb(149, 225, 110), #808080);
 }
 body {
   color: #fff;
