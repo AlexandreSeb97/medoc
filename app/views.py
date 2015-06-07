@@ -25,6 +25,23 @@ def hospital(request):
             'year':datetime.now().year,
         })
     )
+
+def medoc(request):
+   """ Afficher tous les medecins de notre database """
+   doctor = Doctor.objects.all() 
+   return render(request, 'app/medoc.html', {'doctors': doctor})
+   """Renders the medoc page."""
+   assert isinstance(request, HttpRequest)
+   return render(
+       request,
+       'app/medoc.html',
+       context_instance = RequestContext(request,
+       {
+           'title':'Medoc',
+           'message':'How do you feel today?',
+           'year':datetime.now().year,
+       })
+   )
 	
 def hospital_fr(request):
     """ Afficher tous les hopitaux de notre blog """
@@ -208,20 +225,6 @@ def about_fr(request):
         {
             'title':'A Propos',
             'message':"Bonjour Doc!",
-            'year':datetime.now().year,
-        })
-    )
-
-def medoc(request):
-    """Renders the app page"""
-    assert isinstance(request, HttpRequest)
-    return render(
-       request,
-       'app/medoc.html',
-       context_instance = RequestContext(request,
-        {
-            'title':'Medoc',
-            'message':'How do you feel today?',
             'year':datetime.now().year,
         })
     )

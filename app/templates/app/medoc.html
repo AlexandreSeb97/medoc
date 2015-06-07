@@ -2,13 +2,11 @@
 
 {% block content %}
 
-<h2>{{ title }}.</h2>
+<h2>{{ title }}</h2>
 <h3>{{ message }}</h3>
 
 <h2> here's a list of places that could hurt: </h2>
- <div class="page-header">
-              
-            </div>
+<br /> 
             <div class="row">
                 <div class="col-sm-4">
                     
@@ -19,5 +17,28 @@
                         <a href="#" class="list-group-item">Belly</a>
                     
                 </div></div>
-<h2> Input one of them </h2>
+                
+                
+                
+                <br />
+<div class="panel panel-primary">
+	<div class="panel-heading">
+	    <h2 class="panel-title">Here is a list of specialized doctors.</h2>
+<h1 class="hospital" > Pediatres </h1>
+  {% for doctor in doctors %}
+  {% if doctor.specialite == "Pediatrie" %}
+  	<div class="Doctor">
+   <h3> {{ doctor.nom }}</h3>
+        <p> {{ doctor.adresse }} ---  {{ doctor.phone_number }}</p>
+    {% endif %}
+{% endfor %}
+<h1 class="hospital" > Generaliste </h1>
+  {% for doctor in doctors %}
+  {% if doctor.specialite == "Generaliste" %}
+  	<div class="Doctor">
+   <h3> {{ doctor.nom }}</h3>
+        <p> {{ doctor.adresse }} ---  {{ doctor.phone_number }}</p>
+    {% endif %}
+{% endfor %}
+                                
 {% endblock %}
