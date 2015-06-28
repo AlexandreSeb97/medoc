@@ -26,7 +26,7 @@ border-bottom:1px solid rgb(174, 203, 209);
 
 .th_contact02
 {
-background-color:rgb(56,102,125);
+background-color:rgb(147, 228, 121);
 border-radius:0 0 12px 12px;
 padding:2rem;
 width:33,3%;

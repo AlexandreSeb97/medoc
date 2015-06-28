@@ -1,0 +1,55 @@
+﻿{% extends "app/layout_home.html" %}
+
+{% block content %}
+  <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Hello There! 😊 </h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li class="active"><a href="{% url 'en' %}">English</a></li>
+                  <li><a href="{%url 'fr' %}">Francais</a></li>
+                  <li><a href="{% url 'kr' %}">Kreyol</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="inner cover">
+            <h1 class="cover-heading">MeDOC</h1>
+			<br />
+            <p class="lead">Welcome to MeDOC, choose a language</p>
+            <p class="lead">Or go to the hospital!</p>
+            <p class="lead">
+              <a href="{% url 'hospital' %}" class="btn btn-lg btn-primary">Quick! To the Hospital!</a>
+            </p>
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>{% endblock %}</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+ 
+

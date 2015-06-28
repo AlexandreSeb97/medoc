@@ -1,0 +1,38 @@
+{% extends "app/kr/layout_kr.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>MeDOC</h1>
+    <p class="lead">Yo kreye app sa a avek Django ak Python. </p>
+	
+    <p><a class="btn btn-default" href="{% url 'medoc_kr' %}">Ann Ale! &raquo;</a></p>
+	<br />
+	<h6> Photo by Alexandre </h6>
+    
+</div>
+
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Lopital</h2>
+        <p>
+            Gad ki lopital ki tou pre w'
+        </p>
+        <p><a href="{% url 'hospital_kr' %}" class="btn btn-primary btn-large">Lopital &raquo;</a></p>
+        
+    </div>
+    <div class="col-md-4">
+        <h2>Kontakte n'!</h2>
+        <p>Pran kontak ak devlopè yo </p>
+        <p><a class="btn btn-default" href="{% url 'contact_kr' %}">Kontak &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>A Pwopo</h2>
+        <p>Ranseye w' sou app la</p>
+        <p><a class="btn btn-default" href="{% url 'about_kr' %}">A pwopo &raquo;</a></p>
+    </div>
+</div>
+
+
+{% endblock %}

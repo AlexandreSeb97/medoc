@@ -1,0 +1,38 @@
+{% extends "app/fr/layout_fr.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>MeDOC</h1>
+    <p class="lead">Cette application a ete créée en utilisant Python et Django. </p>
+	
+    <p><a class="btn btn-default" href="{% url 'medoc' %}">Demarrez! &raquo;</a></p>
+	<br />
+	<h6> Photo by Alexandre </h6>
+    
+</div>
+
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Hopitaux</h2>
+        <p>
+            Voyez les hopitaux proches de vous
+        </p>
+        <p><a href="{% url 'hospital_fr' %}" class="btn btn-primary btn-large">Hopitaux &raquo;</a></p>
+        
+    </div>
+    <div class="col-md-4">
+        <h2>Contactez nous!</h2>
+        <p>Contactez les developpeurs</p>
+        <p><a class="btn btn-default" href="{% url 'contact_fr' %}">Contact &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>A Propos</h2>
+        <p>Apprenez en plus sur l'application</p>
+        <p><a class="btn btn-default" href="{% url 'about_fr' %}">A Propos &raquo;</a></p>
+    </div>
+</div>
+
+
+{% endblock %}
