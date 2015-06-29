@@ -27,13 +27,8 @@ a:hover {
 html,
 body {
 
-<<<<<<< HEAD
   background-color: rgb(174, 203, 209);
    background-image:  radial-gradient(rgb(174, 203, 209), #808080);
-=======
-  background-color: rgb(149, 225, 110);
-   background-image:  radial-gradient(rgb(149, 225, 110), #808080);
->>>>>>> 3c031ae3c93a3582a05cafbe103dc49d90c5fa8e
 }
 body {
   color: #fff;
@@ -169,8 +164,4 @@ body {
   .cover-container {
     width: 700px;
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 3c031ae3c93a3582a05cafbe103dc49d90c5fa8e

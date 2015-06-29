@@ -12,19 +12,12 @@ from app.models import Hospital
 def hospital(request):
     """ Afficher tous les hopitaux de notre blog """
     hospital = Hospital.objects.all() 
-<<<<<<< HEAD
-=======
-    return render(request, 'app/hospitals.html', {'hospitals': hospital})
->>>>>>> 3c031ae3c93a3582a05cafbe103dc49d90c5fa8e
     """Renders the hospital page."""
     assert isinstance(request, HttpRequest)
     return render(
         request,
         'app/hospitals.html',
-<<<<<<< HEAD
 	{'hospitals': hospital},
-=======
->>>>>>> 3c031ae3c93a3582a05cafbe103dc49d90c5fa8e
         context_instance = RequestContext(request,
         {
             'title':'Hospitals',
@@ -210,7 +203,6 @@ def about(request):
 
 def about_kr(request):
     """Renders the about page."""
-<<<<<<< HEAD
     assert isinstance(request, HttpRequest)
     return render(
         request,
@@ -264,30 +256,6 @@ def medoc_kr(request):
         {
             'title':'Medoc',
             'message':"Koman w' santi w' jodia?",
-=======
-    assert isinstance(request, HttpRequest)
-    return render(
-        request,
-        'app/kr/about_kr.html',
-        context_instance = RequestContext(request,
-        {
-            'title':'A Pwopo',
-            'message':"Sa k'ap fet Doc la?",
-            'year':datetime.now().year,
-        })
-    )
-
-def about_fr(request):
-    """Renders the about page."""
-    assert isinstance(request, HttpRequest)
-    return render(
-        request,
-        'app/fr/about_fr.html',
-        context_instance = RequestContext(request,
-        {
-            'title':'A Propos',
-            'message':"Bonjour Doc!",
->>>>>>> 3c031ae3c93a3582a05cafbe103dc49d90c5fa8e
             'year':datetime.now().year,
         })
     )
@@ -333,63 +301,4 @@ def head_fr(request):
             'year':datetime.now().year,
         })
     )
-<<<<<<< HEAD
-=======
-
-def medoc_kr(request):
-    """Renders the app page"""
-    assert isinstance(request, HttpRequest)
-    return render(
-       request,
-       'app/kr/medoc_kr.html',
-       context_instance = RequestContext(request,
-        {
-            'title':'Medoc',
-            'message':"Koman w' santi w' jodia?",
-            'year':datetime.now().year,
-        })
-    )
-
-def medoc_fr(request):
-    """Renders the app page"""
-    assert isinstance(request, HttpRequest)
-    return render(
-       request,
-       'app/fr/medoc_fr.html',
-       context_instance = RequestContext(request,
-        {
-            'title':'Medoc',
-            'message':"Comment vous sentez vous aujourd'hui?",
-            'year':datetime.now().year,
-        })
-    )
-
-def head_kr(request):
-    """Renders the head page"""
-    assert isinstance(request, HttpRequest)
-    return render(
-       request,
-       'app/kr/head_kr.html',
-       context_instance = RequestContext(request,
-        {
-            'title':'Tet',
-            'message':"Pran swen ko w'!",
-            'year':datetime.now().year,
-        })
-    )
-
-def head_fr(request):
-    """Renders the head page"""
-    assert isinstance(request, HttpRequest)
-    return render(
-       request,
-       'app/fr/head_fr.html',
-       context_instance = RequestContext(request,
-        {
-            'title':'Tete',
-            'message':"Portez vous bien!",
-            'year':datetime.now().year,
-        })
-    )
->>>>>>> 3c031ae3c93a3582a05cafbe103dc49d90c5fa8e
 	
