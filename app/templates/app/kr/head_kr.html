@@ -6,25 +6,32 @@
 <h3>{{ message }}</h3>
 
  <div class="page-header">
-              
-            </div>
-           <div class="col-sm-4">
-                    <div class="panel panel-warning">
-                        <div class="panel-heading">
-                             <h3 class="panel-title">Head</h3>
-                        </div>
-                        <div class="panel-body">Si ou gen tet fe mal, yon ti repo, ak yon konprime (fe atansyon ak doz la)
-                        epi mwens stress ta sipoze regle sa. Si tet fe mal la pesiste e ke li anraje, kouri al kay yon dokte siouple.
-                        </div>
 
-               
-                    <div class="panel panel-danger">
-                        <div class="panel-heading">
-                 <h3 class="panel-title">Dokte ####</h3>
-            </div>
-            <div class="well">
-                <p>Adres: ############ <br /> Telefon: 5094000000</p>
-            </div></div></div>
+ </div>
+<div class="panel panel-primary">
+<div class="panel-heading">
+<h2 class="panel-title">Here is a list of specialized doctors.</h2>
+<h1 class="hospital" > Pediatres </h1>
+{% for doctor in doctors %}
+{% if doctor.country == "Haiti" %}
+{% elif doctor.specialite == "Pediatrie" %}
+<div class="Doctor">
+<h3> {{ doctor.nom }}</h3>
+<p> {{ doctor.adresse }} ---  {{ doctor.phone_number }}</p>
+{% endif %}
+{% endfor %}
+<h1 class="hospital" > Generaliste </h1>
+{% for doctor in doctors %}
+{% if doctor.country == "Haiti" %}
+{% elif doctor.specialite == "Generaliste" %}
+<div class="Doctor">
+<h3> {{ doctor.nom }}</h3>
+<p> {{ doctor.adresse }} ---  {{ doctor.phone_number }}</p>
+
+{% endif %}
+{% endfor %}
+
+ </div></div></div>
 
 
 {% endblock %}

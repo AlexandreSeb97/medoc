@@ -11,7 +11,7 @@ from app.models import Hospital
 
 def hospital(request):
     """ Afficher tous les hopitaux de notre blog """
-    hospital = Hospital.objects.all() 
+    hospital = Hospital.objects.all()
     """Renders the hospital page."""
     assert isinstance(request, HttpRequest)
     return render(
@@ -28,7 +28,7 @@ def hospital(request):
 
 def medoc(request):
    """ Afficher tous les medecins de notre database """
-   doctor = Doctor.objects.all() 
+   doctor = Doctor.objects.all()
    return render(request, 'app/medoc.html', {'doctors': doctor})
    """Renders the medoc page."""
    assert isinstance(request, HttpRequest)
@@ -42,10 +42,10 @@ def medoc(request):
            'year':datetime.now().year,
        })
    )
-	
+
 def hospital_fr(request):
     """ Afficher tous les hopitaux de notre blog """
-    hospital = Hospital.objects.all() 
+    hospital = Hospital.objects.all()
     return render(request, 'app/fr/hospitals_fr.html', {'hospitals': hospital})
     """Renders the hospital page."""
     assert isinstance(request, HttpRequest)
@@ -59,10 +59,10 @@ def hospital_fr(request):
             'year':datetime.now().year,
         })
     )
-	
+
 def hospital_kr(request):
     """ Afficher tous les hopitaux de notre blog """
-    hospital = Hospital.objects.all() 
+    hospital = Hospital.objects.all()
     return render(request, 'app/kr/hospitals_kr.html', {'hospitals': hospital})
     """Renders the hospital page."""
     assert isinstance(request, HttpRequest)
@@ -76,7 +76,7 @@ def hospital_kr(request):
             'year':datetime.now().year,
         })
     )
-	
+
 def info(request, id):
 	"""Renders full hospital infos."""
 	try:
@@ -100,7 +100,7 @@ def home(request):
         })
     )
 
-	
+
 
 def _en(request):
     """Renders english home page."""
@@ -143,8 +143,8 @@ def _kr(request):
 			'date':datetime.now(),
 		})
 	)
-	
-	
+
+
 def contact(request):
     """Renders the contact page."""
     assert isinstance(request, HttpRequest)
@@ -231,7 +231,7 @@ def about_fr(request):
 
 def _head(request):
 	""" Afficher tous les medecins de notre database """
-	doctor = Doctor.objects.all() 
+	doctor = Doctor.objects.all()
 	"""Renders the medoc page."""
 	assert isinstance(request, HttpRequest)
 	return render(
@@ -275,30 +275,35 @@ def medoc_fr(request):
     )
 
 def head_kr(request):
-    """Renders the head page"""
-    assert isinstance(request, HttpRequest)
-    return render(
-       request,
-       'app/kr/head_kr.html',
-       context_instance = RequestContext(request,
-        {
-            'title':'Tet',
-            'message':"Pran swen ko w'!",
-            'year':datetime.now().year,
-        })
-    )
+	""" Afficher tous les medecins de notre database """
+	doctor = Doctor.objects.all()
+	"""Renders the medoc page."""
+	assert isinstance(request, HttpRequest)
+	return render(
+		request,
+		'app/kr/head_kr.html',
+		{'doctors': doctor},
+		context_instance = RequestContext(request,
+		{
+			'title':'Dokte an Ayiti',
+			'message':'Koman w santi w jodia',
+			'year':datetime.now().year,
+		})
+	)
 
 def head_fr(request):
-    """Renders the head page"""
-    assert isinstance(request, HttpRequest)
-    return render(
-       request,
-       'app/fr/head_fr.html',
-       context_instance = RequestContext(request,
-        {
-            'title':'Tete',
-            'message':"Portez vous bien!",
-            'year':datetime.now().year,
-        })
-    )
-	
+	""" Afficher tous les medecins de notre database """
+	doctor = Doctor.objects.all()
+	"""Renders the medoc page."""
+	assert isinstance(request, HttpRequest)
+	return render(
+		request,
+		'app/fr/head_fr.html',
+		{'doctors': doctor},
+		context_instance = RequestContext(request,
+		{
+			'title':'Medecins en Haiti',
+			'message':'Comment vous sentez vous aujourdhui?',
+			'year':datetime.now().year,
+		})
+	)

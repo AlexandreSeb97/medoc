@@ -5,4 +5,4 @@
 
 #Coming...have info about physicians in your area
 
-Link to app: medoc.herokuapp.com
+#medoc.herokuapp.com
