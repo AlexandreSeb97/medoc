@@ -17,7 +17,7 @@ var marker;
 var pos;
 var infowindow;
 
-function initialize() 
+function initialize()
 {
 
     var mapOptions = {
@@ -32,9 +32,9 @@ function initialize()
     map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
     //HTML5 geolocation
-    if (navigator.geolocation) 
+    if (navigator.geolocation)
     {
-       navigator.geolocation.getCurrentPosition(function(position) 
+       navigator.geolocation.getCurrentPosition(function(position)
        {
             pos = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
 
@@ -48,30 +48,30 @@ function initialize()
             var service = new google.maps.places.PlacesService(map);
             service.nearbySearch(request,callback);
 
-        }, 
+        },
 
-        function() 
-        { 
+        function()
+        {
         handleNoGeolocation(true);
         });
-    } 
-    else 
+    }
+    else
     {
     handleNoGeolocation(false);
     }
 
-    function callback(results, status) 
+    function callback(results, status)
     {
-      if (status == google.maps.places.PlacesServiceStatus.OK) 
+      if (status == google.maps.places.PlacesServiceStatus.OK)
       {
-        for (var i = 0; i < results.length; i++) 
+        for (var i = 0; i < results.length; i++)
         {
           createMarker(results[i]);
         }
       }
     }
 
-    function createMarker(place) 
+    function createMarker(place)
     {
       var placeLoc = place.geometry.location;
       var marker = new google.maps.Marker({
@@ -79,7 +79,7 @@ function initialize()
         position: place.geometry.location
       });
 
-    google.maps.event.addListener(marker, 'click', function() 
+    google.maps.event.addListener(marker, 'click', function()
     {
     infowindow.setContent(place.name);
     infowindow.open(map, this);
@@ -105,63 +105,69 @@ google.maps.event.addDomListener(window, 'load', initialize);
 {% for hospital in hospitals %}
   {% if hospital.quartier == "Delmas" %}
   	<div class="Hospital">
-        
+
         <h3> {{ hospital.nom }}</h3>
-        <p> {{ hospital.adresse }} --- Phone: {{ hospital.phone_number }}</p>
+        <h4> {{ hospital.specialite }} </h4>
+        <p> {{ hospital.adresse }} --- Phone: {{ hospital.phone_number1 }} // {{ hospital.phone_number2 }}</p>
     {% endif %}
 {% endfor %}
 <h1 class ="hospital"> In Canape-Vert </h1>
 {% for hospital in hospitals %}
   {% if hospital.quartier == "Canapé-Vert" %}
   	<div class="Hospital">
-        
    <h3> {{ hospital.nom }}</h3>
-        <p> {{ hospital.adresse }} --- Phone: {{ hospital.phone_number }}</p>
+   <h4> {{ hospital.specialite }} </h4>
+        <p> {{ hospital.adresse }} --- Phone: {{ hospital.phone_number1 }} // {{ hospital.phone_number2 }}</p>
     {% endif %}
 {% endfor %}
 <h1 class ="hospital"> In Turgeau </h1>
 {% for hospital in hospitals %}
   {% if hospital.quartier == "Turgeau" %}
   	<div class="Hospital">
-        
+
 <h3> {{ hospital.nom }}</h3>
-        <p> {{ hospital.adresse }} --- Phone: {{ hospital.phone_number }}</p>
+<h4> {{ hospital.specialite }} </h4>
+        <p> {{ hospital.adresse }} --- Phone: {{ hospital.phone_number1 }} // {{ hospital.phone_number2 }}</p>
     {% endif %}
 {% endfor %}
 <h1 class ="hospital"> In Pacot </h1>
 {% for hospital in hospitals %}
   {% if hospital.quartier == "Pacot" %}
   	<div class="Hospital">
-        
+
 <h3> {{ hospital.nom }}</h3>
-        <p> {{ hospital.adresse }} --- Phone: {{ hospital.phone_number }}</p>
+<h4> {{ hospital.specialite }} </h4>
+        <p> {{ hospital.adresse }} --- Phone: {{ hospital.phone_number1 }} // {{ hospital.phone_number2 }}}</p>
     {% endif %}
 {% endfor %}
 <h1 class ="hospital"> In Fermathe </h1>
 {% for hospital in hospitals %}
   {% if hospital.quartier == "Fermathe" %}
   	<div class="Hospital">
-        
+
 <h3> {{ hospital.nom }}</h3>
-        <p> {{ hospital.adresse }} --- Phone: {{ hospital.phone_number }}</p>
+<h4> {{ hospital.specialite }} </h4>
+        <p> {{ hospital.adresse }} --- Phone: {{ hospital.phone_number1 }} // {{ hospital.phone_number2 }}</p>
     {% endif %}
 {% endfor %}
 <h1 class ="hospital"> In Centre-Ville PAP </h1>
 {% for hospital in hospitals %}
   {% if hospital.quartier == "Centre-Ville Port-au-Prince" %}
   	<div class="Hospital">
-        
+
 <h3> {{ hospital.nom }}</h3>
-        <p> {{ hospital.adresse }} --- Phone: {{ hospital.phone_number }}</p>
+<h4> {{ hospital.specialite }} </h4>
+        <p> {{ hospital.adresse }} --- Phone: {{ hospital.phone_number1 }} // {{ hospital.phone_number2 }}</p>
     {% endif %}
 {% endfor %}
 <h1 class ="hospital"> In Bois-Verna </h1>
 {% for hospital in hospitals %}
   {% if hospital.quartier == "Bois-Verna" %}
   	<div class="Hospital">
-        
+
  <h3> {{ hospital.nom }}</h3>
-        <p> {{ hospital.adresse }} --- Phone: {{ hospital.phone_number }}</p>
+ <h4> {{ hospital.specialite }} </h4>
+        <p> {{ hospital.adresse }} --- Phone:{{ hospital.phone_number1 }} // {{ hospital.phone_number2 }}</p>
     {% endif %}
 {% endfor %}
 

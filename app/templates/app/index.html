@@ -26,9 +26,12 @@
             <h1 class="cover-heading">MeDOC</h1>
 			<br />
             <p class="lead">Welcome to MeDOC, choose a language</p>
-            <p class="lead">Or go to the hospital!</p>
+            <p class="lead">Go to the hospital!</p>
             <p class="lead">
               <a href="{% url 'hospital' %}" class="btn btn-lg btn-primary">Quick! To the Hospital!</a>
+            </p>
+            <p class="lead">Or get a doctor or some tips for your symptoms</p>
+              <a href="{% url 'medoc' %}" class="btn btn-lg btn-danger">Quick! Get a Doctor!</a>
             </p>
           </div>
 
@@ -51,5 +54,3 @@
     <script src="../../dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
- 
-
