@@ -2,6 +2,23 @@
  * Globals
  */
 
+/* Custom Google Font */
+p {
+font-family: 'Ubuntu', sans-serif;
+}
+
+h1 {
+font-family: 'Ubuntu', sans-serif;
+}
+
+h2 {
+font-family: 'Ubuntu', sans-serif;
+}
+
+h3 {
+font-family: 'Ubuntu', sans-serif;
+}
+
 /* Links */
 a,
 a:focus,
@@ -27,8 +44,8 @@ a:hover {
 html,
 body {
 
-  background-color: rgb(174, 203, 209);
-   background-image:  radial-gradient(rgb(174, 203, 209), #808080);
+  background-color: rgb(249, 207, 193);
+   background-image:  radial-gradient(rgb(249, 207, 193), #8CC3C8);
 }
 body {
   color: #fff;
@@ -65,16 +82,16 @@ body {
 .masthead-brand {
   margin-top: 10px;
   margin-bottom: 10px;
-  
+
 }
 
 .masthead-nav > li {
   display: inline-block;
- 
+
 }
 .masthead-nav > li + li {
   margin-left: 20px;
-  
+
 }
 .masthead-nav > li > a {
   padding-right: 0;

@@ -1,8 +1,8 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-color: rgb(174, 203, 209);
-    background-image: radial-gradient(rgb(174, 203, 209), #808080);
+    background-color: rgb(249, 207, 193);
+     background-image:  radial-gradient(rgb(249, 207, 193), #8CC3C8);
 }
 
 .th_contact010
@@ -47,7 +47,7 @@ font:calibri;
 .nav {
   padding-left: 0;
   margin-bottom: 0;
-  list-style: none;	
+  list-style: none;
   border-bottom: rgb(174, 203, 209);
   padding-bottom: 3px;
   background-color: rgb(56,102,125);
@@ -142,7 +142,7 @@ h2
 }
 
 .jumbotron {
-    background: url("../images/country3.JPG") no-repeat center fixed ;
+    background: url("../images/country3-custom.JPG") no-repeat center fixed ;
     -webkit-background-size: cover; /* pour Chrome et Safari */
     -moz-background-size: cover; /* pour Firefox */
     -o-background-size: cover; /* pour Opera */
