@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 {% extends "app/kr/layout_kr.html" %}
+=======
+{% extends "app/en/layout_en.html" %}
+>>>>>>> 58df6ffe51c05bf8ac97145f7ea28a8dfccd8eb5
 
 {% block content %}
     <style>
@@ -17,7 +21,11 @@ var marker;
 var pos;
 var infowindow;
 
+<<<<<<< HEAD
 function initialize()
+=======
+function initialize() 
+>>>>>>> 58df6ffe51c05bf8ac97145f7ea28a8dfccd8eb5
 {
 
     var mapOptions = {
@@ -32,9 +40,15 @@ function initialize()
     map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
     //HTML5 geolocation
+<<<<<<< HEAD
     if (navigator.geolocation)
     {
        navigator.geolocation.getCurrentPosition(function(position)
+=======
+    if (navigator.geolocation) 
+    {
+       navigator.geolocation.getCurrentPosition(function(position) 
+>>>>>>> 58df6ffe51c05bf8ac97145f7ea28a8dfccd8eb5
        {
             pos = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
 
@@ -48,6 +62,7 @@ function initialize()
             var service = new google.maps.places.PlacesService(map);
             service.nearbySearch(request,callback);
 
+<<<<<<< HEAD
         },
 
         function()
@@ -56,22 +71,44 @@ function initialize()
         });
     }
     else
+=======
+        }, 
+
+        function() 
+        { 
+        handleNoGeolocation(true);
+        });
+    } 
+    else 
+>>>>>>> 58df6ffe51c05bf8ac97145f7ea28a8dfccd8eb5
     {
     handleNoGeolocation(false);
     }
 
+<<<<<<< HEAD
     function callback(results, status)
     {
       if (status == google.maps.places.PlacesServiceStatus.OK)
       {
         for (var i = 0; i < results.length; i++)
+=======
+    function callback(results, status) 
+    {
+      if (status == google.maps.places.PlacesServiceStatus.OK) 
+      {
+        for (var i = 0; i < results.length; i++) 
+>>>>>>> 58df6ffe51c05bf8ac97145f7ea28a8dfccd8eb5
         {
           createMarker(results[i]);
         }
       }
     }
 
+<<<<<<< HEAD
     function createMarker(place)
+=======
+    function createMarker(place) 
+>>>>>>> 58df6ffe51c05bf8ac97145f7ea28a8dfccd8eb5
     {
       var placeLoc = place.geometry.location;
       var marker = new google.maps.Marker({
@@ -79,7 +116,11 @@ function initialize()
         position: place.geometry.location
       });
 
+<<<<<<< HEAD
     google.maps.event.addListener(marker, 'click', function()
+=======
+    google.maps.event.addListener(marker, 'click', function() 
+>>>>>>> 58df6ffe51c05bf8ac97145f7ea28a8dfccd8eb5
     {
     infowindow.setContent(place.name);
     infowindow.open(map, this);
@@ -105,7 +146,11 @@ google.maps.event.addDomListener(window, 'load', initialize);
 {% for hospital in hospitals %}
   {% if hospital.quartier == "Delmas" %}
   	<div class="Hospital">
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 58df6ffe51c05bf8ac97145f7ea28a8dfccd8eb5
         <h3> {{ hospital.nom }}</h3>
         <p>{{ hospital.quartier }} --- {{ hospital.adresse }}</p>
     {% endif %}
@@ -114,7 +159,11 @@ google.maps.event.addDomListener(window, 'load', initialize);
 {% for hospital in hospitals %}
   {% if hospital.quartier == "Canapé-Vert" %}
   	<div class="Hospital">
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 58df6ffe51c05bf8ac97145f7ea28a8dfccd8eb5
         <h3> {{ hospital.nom }}</h3>
         <p>{{ hospital.quartier }} --- {{ hospital.adresse }}</p>
     {% endif %}
@@ -123,7 +172,11 @@ google.maps.event.addDomListener(window, 'load', initialize);
 {% for hospital in hospitals %}
   {% if hospital.quartier == "Turgeau" %}
   	<div class="Hospital">
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 58df6ffe51c05bf8ac97145f7ea28a8dfccd8eb5
         <h3> {{ hospital.nom }}</h3>
         <p>{{ hospital.quartier }} --- {{ hospital.adresse }}</p>
     {% endif %}
@@ -132,7 +185,11 @@ google.maps.event.addDomListener(window, 'load', initialize);
 {% for hospital in hospitals %}
   {% if hospital.quartier == "Pacot" %}
   	<div class="Hospital">
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 58df6ffe51c05bf8ac97145f7ea28a8dfccd8eb5
         <h3> {{ hospital.nom }}</h3>
         <p>{{ hospital.quartier }} --- {{ hospital.adresse }}</p>
     {% endif %}
@@ -141,7 +198,11 @@ google.maps.event.addDomListener(window, 'load', initialize);
 {% for hospital in hospitals %}
   {% if hospital.quartier == "Fermathe" %}
   	<div class="Hospital">
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 58df6ffe51c05bf8ac97145f7ea28a8dfccd8eb5
         <h3> {{ hospital.nom }}</h3>
         <p>{{ hospital.quartier }} --- {{ hospital.adresse }}</p>
     {% endif %}
@@ -150,7 +211,11 @@ google.maps.event.addDomListener(window, 'load', initialize);
 {% for hospital in hospitals %}
   {% if hospital.quartier == "Centre-Ville Port-au-Prince" %}
   	<div class="Hospital">
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> 58df6ffe51c05bf8ac97145f7ea28a8dfccd8eb5
         <h3> {{ hospital.nom }}</h3>
         <p>{{ hospital.quartier }} --- {{ hospital.adresse }}</p>
     {% endif %}
@@ -165,4 +230,8 @@ google.maps.event.addDomListener(window, 'load', initialize);
 </div>
 
 
+<<<<<<< HEAD
 {% endblock %}
+=======
+{% endblock %}
+>>>>>>> 58df6ffe51c05bf8ac97145f7ea28a8dfccd8eb5

@@ -44,10 +44,13 @@ font:calibri;
   border-color: rgb(56,102,125);
 }
 
+<<<<<<< HEAD
 a{
   font-family: 'Ubuntu', sans-serif;
 }
 
+=======
+>>>>>>> 58df6ffe51c05bf8ac97145f7ea28a8dfccd8eb5
 .nav {
   padding-left: 0;
   margin-bottom: 0;
