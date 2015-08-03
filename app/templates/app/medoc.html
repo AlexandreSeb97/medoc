@@ -1,0 +1,42 @@
+﻿{% extends "app/en/layout_en.html" %}
+
+{% block content %}
+
+<h2>{{ title }}</h2>
+<h3>{{ message }}</h3>
+
+<h2> List of Physicians by country. </h2>
+<br />
+            <div class="row">
+                <div class="col-sm-4">
+
+                        <a href="{% url 'head' %}" class="list-group-item">Haiti*</a>
+                        <a href="#" class="list-group-item">Dominican Republic</a>
+                        <a href="#" class="list-group-item">Some country</a>
+                        <a href="#" class="list-group-item">Some country</a>
+                        <a href="#" class="list-group-item">Some country</a>
+
+                </div></div>
+                <br /><br />
+<h2> Symptoms </h2>
+<h3> Use our search engine to look for tips on your symptoms <h3>
+  <h4> *NOTE* Do not take the results found here as diagnostics!!! These are only tips and might not be accurate!!!
+    Only a licensed physician is able to give a full diagnostic!!! Please refer to our list of Physicians by country
+    to see recommended physicians near you. </h4>
+    <p> *TIPS* Use search words like "how to treat a.. (headache)" or "what to do in case of.. (broken leg)" for better results </p>
+    <script>
+      (function() {
+        var cx = '012339170522374539234:reenqb2vpoi';
+        var gcse = document.createElement('script');
+        gcse.type = 'text/javascript';
+        gcse.async = true;
+        gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+            '//cse.google.com/cse.js?cx=' + cx;
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(gcse, s);
+      })();
+    </script>
+    <gcse:search enableAutoComplete="true"></gcse:search>
+
+
+{% endblock %}

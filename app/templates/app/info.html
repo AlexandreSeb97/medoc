@@ -1,0 +1,17 @@
+{% extends "app/en/layout_en.html" %}
+
+{% block content %}
+
+<h2>{{ title }}</h2>
+<h3>{{ message }}</h3>
+
+<div class="row">
+    <div class="col-md-4">
+<h1>{{ hospital.nom }} <span class="small"> {{ hospital.adresse }}</span></h1>
+<p class="infos"> {{ hospital.email }}, le {{ hospital.phone_number }}</p>
+<div class="contenu">{{ hospital.specialite }}</div>
+</div>
+</div>
+
+
+{% endblock %}

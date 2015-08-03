@@ -1,0 +1,44 @@
+﻿{% extends "app/en/layout_en.html" %}
+
+{% block content %}
+
+<h2>{{ title }}</h2>
+<h3>{{ message }}</h3>
+
+<h2> List of Physicians by country. </h2>
+<br /> 
+            <div class="row">
+                <div class="col-sm-4">
+                    
+                        <a href="{% url 'head' %}" class="list-group-item">Haiti*</a>
+                        <a href="#" class="list-group-item">Dominican Republic</a>
+                        <a href="#" class="list-group-item">Some country</a>
+                        <a href="#" class="list-group-item">Some country</a>
+                        <a href="#" class="list-group-item">Some country</a>
+                    
+                </div></div>
+                
+                
+                
+                <br />
+<div class="panel panel-primary">
+	<div class="panel-heading">
+	    <h2 class="panel-title">Here is a list of specialized doctors.</h2>
+<h1 class="hospital" > Pediatres </h1>
+  {% for doctor in doctors %}
+  {% if doctor.specialite == "Pediatrie" %}
+  	<div class="Doctor">
+   <h3> {{ doctor.nom }}</h3>
+        <p> {{ doctor.adresse }} ---  {{ doctor.phone_number }}</p>
+    {% endif %}
+{% endfor %}
+<h1 class="hospital" > Generaliste </h1>
+  {% for doctor in doctors %}
+  {% if doctor.specialite == "Generaliste" %}
+  	<div class="Doctor">
+   <h3> {{ doctor.nom }}</h3>
+        <p> {{ doctor.adresse }} ---  {{ doctor.phone_number }}</p>
+    {% endif %}
+{% endfor %}
+                                
+{% endblock %}

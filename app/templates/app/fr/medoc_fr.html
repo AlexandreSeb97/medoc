@@ -1,0 +1,23 @@
+﻿{% extends "app/fr/layout_fr.html" %}
+
+{% block content %}
+
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+
+<h2> Liste de medecins par pays: </h2>
+<div class="row">
+    <div class="col-sm-4">
+
+            <a href="{% url 'head_fr' %}" class="list-group-item">Haiti*</a>
+            <a href="#" class="list-group-item">Republique Dominicaine</a>
+            <a href="#" class="list-group-item">Some country</a>
+            <a href="#" class="list-group-item">Some country</a>
+            <a href="#" class="list-group-item">Some country</a>
+
+    </div></div>
+
+
+
+    <br />
+{% endblock %}

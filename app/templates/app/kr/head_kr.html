@@ -1,0 +1,37 @@
+﻿{% extends "app/kr/layout_kr.html" %}
+
+{% block content %}
+
+<h2>{{ title }}.</h2>
+<h3>{{ message }}</h3>
+
+ <div class="page-header">
+
+ </div>
+<div class="panel panel-primary">
+<div class="panel-heading">
+<h2 class="panel-title">Here is a list of specialized doctors.</h2>
+<h1 class="hospital" > Pediatres </h1>
+{% for doctor in doctors %}
+{% if doctor.country == "Haiti" %}
+{% elif doctor.specialite == "Pediatrie" %}
+<div class="Doctor">
+<h3> {{ doctor.nom }}</h3>
+<p> {{ doctor.adresse }} ---  {{ doctor.phone_number }}</p>
+{% endif %}
+{% endfor %}
+<h1 class="hospital" > Generaliste </h1>
+{% for doctor in doctors %}
+{% if doctor.country == "Haiti" %}
+{% elif doctor.specialite == "Generaliste" %}
+<div class="Doctor">
+<h3> {{ doctor.nom }}</h3>
+<p> {{ doctor.adresse }} ---  {{ doctor.phone_number }}</p>
+
+{% endif %}
+{% endfor %}
+
+ </div></div></div>
+
+
+{% endblock %}

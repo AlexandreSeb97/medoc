@@ -1,0 +1,183 @@
+{% extends "app/en/layout_en.html" %}
+
+{% block content %}
+    <style>
+      html, body, #map-canvas {
+        height: 390px;
+        width: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places,v=3.exp&signed_in=true"></script>
+    <script>
+var map;
+var service;
+var marker;
+var pos;
+var infowindow;
+
+function initialize()
+{
+
+    var mapOptions = {
+     zoom: 16,
+     mapTypeId: google.maps.MapTypeId.ROADMAP,
+     scrollwheel: true,
+     panControl: false,
+     streetViewControl: false,
+     mapTypeControl: false,
+     };
+
+    map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+    //HTML5 geolocation
+    if (navigator.geolocation)
+    {
+       navigator.geolocation.getCurrentPosition(function(position)
+       {
+            pos = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
+
+            infowindow = new google.maps.InfoWindow({map: map,position: pos,content: 'You are Here!'});
+
+            var request = {location:pos,radius:2000,types: ['hospital']};
+
+            map.setCenter(pos);
+
+            infowindow = new google.maps.InfoWindow();
+            var service = new google.maps.places.PlacesService(map);
+            service.nearbySearch(request,callback);
+
+        },
+
+        function()
+        {
+        handleNoGeolocation(true);
+        });
+    }
+    else
+    {
+    handleNoGeolocation(false);
+    }
+
+    function callback(results, status)
+    {
+      if (status == google.maps.places.PlacesServiceStatus.OK)
+      {
+        for (var i = 0; i < results.length; i++)
+        {
+          createMarker(results[i]);
+        }
+      }
+    }
+
+    function createMarker(place)
+    {
+      var placeLoc = place.geometry.location;
+      var marker = new google.maps.Marker({
+        map: map,
+        position: place.geometry.location
+      });
+
+    google.maps.event.addListener(marker, 'click', function()
+    {
+    infowindow.setContent(place.name);
+    infowindow.open(map, this);
+    });
+
+}
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+  </head>
+  <body>
+
+    <div id="map-canvas"></div>
+    <p id="error"></p>
+
+
+<div class="panel panel-primary">
+	<div class="panel-heading">
+	    <h3 class="panel-title">List of trusted Hospitals</h3>
+
+	<div class="panel-body">
+<h1 class="hospital" > In Delmas </h1>
+{% for hospital in hospitals %}
+  {% if hospital.quartier == "Delmas" %}
+  	<div class="Hospital">
+
+        <h3> {{ hospital.nom }}</h3>
+        <h4> {{ hospital.specialite }} </h4>
+        <p> {{ hospital.adresse }} --- Phone: {{ hospital.phone_number1 }} // {{ hospital.phone_number2 }}</p>
+    {% endif %}
+{% endfor %}
+<h1 class ="hospital"> In Canape-Vert </h1>
+{% for hospital in hospitals %}
+  {% if hospital.quartier == "Canapé-Vert" %}
+  	<div class="Hospital">
+   <h3> {{ hospital.nom }}</h3>
+   <h4> {{ hospital.specialite }} </h4>
+        <p> {{ hospital.adresse }} --- Phone: {{ hospital.phone_number1 }} // {{ hospital.phone_number2 }}</p>
+    {% endif %}
+{% endfor %}
+<h1 class ="hospital"> In Turgeau </h1>
+{% for hospital in hospitals %}
+  {% if hospital.quartier == "Turgeau" %}
+  	<div class="Hospital">
+
+<h3> {{ hospital.nom }}</h3>
+<h4> {{ hospital.specialite }} </h4>
+        <p> {{ hospital.adresse }} --- Phone: {{ hospital.phone_number1 }} // {{ hospital.phone_number2 }}</p>
+    {% endif %}
+{% endfor %}
+<h1 class ="hospital"> In Pacot </h1>
+{% for hospital in hospitals %}
+  {% if hospital.quartier == "Pacot" %}
+  	<div class="Hospital">
+
+<h3> {{ hospital.nom }}</h3>
+<h4> {{ hospital.specialite }} </h4>
+        <p> {{ hospital.adresse }} --- Phone: {{ hospital.phone_number1 }} // {{ hospital.phone_number2 }}}</p>
+    {% endif %}
+{% endfor %}
+<h1 class ="hospital"> In Fermathe </h1>
+{% for hospital in hospitals %}
+  {% if hospital.quartier == "Fermathe" %}
+  	<div class="Hospital">
+
+<h3> {{ hospital.nom }}</h3>
+<h4> {{ hospital.specialite }} </h4>
+        <p> {{ hospital.adresse }} --- Phone: {{ hospital.phone_number1 }} // {{ hospital.phone_number2 }}</p>
+    {% endif %}
+{% endfor %}
+<h1 class ="hospital"> In Centre-Ville PAP </h1>
+{% for hospital in hospitals %}
+  {% if hospital.quartier == "Centre-Ville Port-au-Prince" %}
+  	<div class="Hospital">
+
+<h3> {{ hospital.nom }}</h3>
+<h4> {{ hospital.specialite }} </h4>
+        <p> {{ hospital.adresse }} --- Phone: {{ hospital.phone_number1 }} // {{ hospital.phone_number2 }}</p>
+    {% endif %}
+{% endfor %}
+<h1 class ="hospital"> In Bois-Verna </h1>
+{% for hospital in hospitals %}
+  {% if hospital.quartier == "Bois-Verna" %}
+  	<div class="Hospital">
+
+ <h3> {{ hospital.nom }}</h3>
+ <h4> {{ hospital.specialite }} </h4>
+        <p> {{ hospital.adresse }} --- Phone:{{ hospital.phone_number1 }} // {{ hospital.phone_number2 }}</p>
+    {% endif %}
+{% endfor %}
+
+
+
+
+
+</div>
+</div>
+</div>
+
+
+{% endblock %}

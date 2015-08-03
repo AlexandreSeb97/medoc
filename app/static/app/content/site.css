@@ -1,0 +1,193 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: rgb(249, 207, 193);
+     background-image:  radial-gradient(rgb(249, 207, 193), #8CC3C8);
+}
+
+.th_contact010
+{
+background: black;
+padding:2rem;
+width:33.3%;
+font:calibri;
+border-bottom:1px solid rgb(174, 203, 209);
+}
+
+.th_contact011
+{
+background: white;
+padding:2rem;
+width:33.3%;
+font:calibri;
+border-bottom:1px solid rgb(174, 203, 209);
+}
+
+
+.th_contact02
+{
+background-color:rgb(56,102,125);
+border-radius:0 0 12px 12px;
+padding:2rem;
+width:33,3%;
+font:calibri;
+}
+
+.hospital {
+  color : #2d4026;
+  background-color: white;
+}
+
+.panel-primary > .panel-heading {
+  color: #ffffff;
+  background-color: rgb(56,102,125);
+  border-color: rgb(56,102,125);
+}
+
+a{
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.nav {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  border-bottom: rgb(174, 203, 209);
+  padding-bottom: 3px;
+  background-color: rgb(56,102,125);
+  border-color: rgb(56,102,125);
+}
+
+.navbar-inverse {
+  background-color: rgb(174, 203, 209);
+  border-color: rgb(56,102,125);
+}
+.navbar-inverse .navbar-brand {
+  color: #fdfdfd;
+}
+.navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
+  color: rgb(174, 203, 209);
+}
+.navbar-inverse .navbar-text {
+  color: #fdfdfd;
+}
+.navbar-inverse .navbar-nav > li > a {
+  color: #fdfdfd;
+}
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+  color: rgb(174, 203, 209);
+}
+.navbar-inverse .navbar-nav > li > .dropdown-menu {
+  background-color: #498531;
+}
+.navbar-inverse .navbar-nav > li > .dropdown-menu > li > a {
+  color: #fdfdfd;
+}
+.navbar-inverse .navbar-nav > li > .dropdown-menu > li > a:hover,
+.navbar-inverse .navbar-nav > li > .dropdown-menu > li > a:focus {
+  color:  rgb(56,102,125);
+  background-color: rgb(56,102,125);
+}
+.navbar-inverse .navbar-nav > li > .dropdown-menu > li > .divider {
+  background-color: #498531;
+}
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+  color: rgb(174, 203, 209);
+  background-color: rgb(56,102,125);
+}
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+  color: rgb(174, 203, 209);
+  background-color:rgb(56,102,125);
+}
+.navbar-inverse .navbar-toggle {
+  border-color: rgb(56,102,125));
+}
+.navbar-inverse .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: rgb(56,102,125);
+}
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: #fdfdfd;
+}
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
+  border-color: #fdfdfd;
+}
+.navbar-inverse .navbar-link {
+  color: #fdfdfd;
+}
+.navbar-inverse .navbar-link:hover {
+  color:rgb(56,102,125);
+}
+
+@media (max-width: 767px) {
+  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+    color: #fdfdfd;
+  }
+  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #86c767;
+  }
+  .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color:  rgb(160,180,181);
+    background-color: #2d4026;
+  }
+}
+
+.lead
+{
+
+  border-bottom: 3px solid rgba(89, 121, 73, 0.74);
+  padding-bottom: 3px;
+  color: white;
+}
+
+h2
+{
+	color: MintCream;
+}
+
+.jumbotron {
+    background: url("../images/country3-custom.JPG") no-repeat center fixed ;
+    -webkit-background-size: cover; /* pour Chrome et Safari */
+    -moz-background-size: cover; /* pour Firefox */
+    -o-background-size: cover; /* pour Opera */
+    background-size: cover; /* version standardisée */
+    text-align: center;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
