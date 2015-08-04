@@ -44,18 +44,16 @@ font:calibri;
   border-color: rgb(56,102,125);
 }
 
-<<<<<<< HEAD
 a{
   font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
 }
 
-=======
->>>>>>> 58df6ffe51c05bf8ac97145f7ea28a8dfccd8eb5
 .nav {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
-  border-bottom: rgb(174, 203, 209);
+  border-bottom: rgb(249, 207, 193);
   padding-bottom: 3px;
   background-color: rgb(56,102,125);
   border-color: rgb(56,102,125);
@@ -81,29 +79,29 @@ a{
   color: rgb(174, 203, 209);
 }
 .navbar-inverse .navbar-nav > li > .dropdown-menu {
-  background-color: #498531;
+  background-color: #8CC3C8;
 }
 .navbar-inverse .navbar-nav > li > .dropdown-menu > li > a {
-  color: #fdfdfd;
+  color: #8CC3C8;
 }
 .navbar-inverse .navbar-nav > li > .dropdown-menu > li > a:hover,
 .navbar-inverse .navbar-nav > li > .dropdown-menu > li > a:focus {
-  color:  rgb(56,102,125);
-  background-color: rgb(56,102,125);
+  color:  #8CC3C8;
+  background-color: #8CC3C8;
 }
 .navbar-inverse .navbar-nav > li > .dropdown-menu > li > .divider {
-  background-color: #498531;
+  background-color: #8CC3C8;
 }
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
-  color: rgb(174, 203, 209);
-  background-color: rgb(56,102,125);
+  color: #8CC3C8;
+  background-color: #8CC3C8;
 }
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
   color: rgb(174, 203, 209);
   background-color:rgb(56,102,125);
 }
 .navbar-inverse .navbar-toggle {
-  border-color: rgb(56,102,125));
+  border-color: rgb(56,102,125);
 }
 .navbar-inverse .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
   background-color: rgb(56,102,125);
@@ -119,7 +117,7 @@ a{
   color: #fdfdfd;
 }
 .navbar-inverse .navbar-link:hover {
-  color:rgb(56,102,125);
+  color:rgb(249, 207, 193);
 }
 
 @media (max-width: 767px) {
