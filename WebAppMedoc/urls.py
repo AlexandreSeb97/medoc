@@ -3,8 +3,9 @@ Definition of urls for WebAppMedoc.
 """
 
 from datetime import datetime
-from django.conf.urls import patterns, url
+from django.conf.urls import patterns, url, include
 from app.forms import BootstrapAuthenticationForm
+from organizations.backends import invitation_backend
 
 # Uncomment the next lines to enable the admin:
 # from django.conf.urls import include
@@ -50,7 +51,9 @@ urlpatterns = patterns('',
     url(r'^head_fr$', 'app.views.head_fr', name='head_fr'),
     url(r'^contact_fr$', 'app.views.contact_fr', name='contact_fr'),
     url(r'^about_fr$', 'app.views.about_fr', name='about_fr'),
-    
+    url(r'^accounts/', include('organizations.urls')),
+    url(r'^invitations/', include(invitation_backend().get_urls()))
+
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
