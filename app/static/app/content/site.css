@@ -1,8 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-color: rgb(249, 207, 193);
-     background-image:  radial-gradient(rgb(249, 207, 193), #8CC3C8);
+    background-color: #EF626C;
 }
 
 .th_contact010
@@ -11,7 +10,7 @@ background: black;
 padding:2rem;
 width:33.3%;
 font:calibri;
-border-bottom:1px solid rgb(174, 203, 209);
+border-bottom:1px solid #84DCCF;
 }
 
 .th_contact011
@@ -20,9 +19,18 @@ background: white;
 padding:2rem;
 width:33.3%;
 font:calibri;
-border-bottom:1px solid rgb(174, 203, 209);
+border-bottom:1px solid #84DCCF;
 }
 
+.panel-body
+{
+  background-color: #84DCCF;
+}
+
+.panel .panel-primary
+{
+    background-color: #84DCCF;
+}
 
 .th_contact02
 {
@@ -53,21 +61,21 @@ a{
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
-  border-bottom: rgb(249, 207, 193);
+  border-bottom: #84DCCF;
   padding-bottom: 3px;
-  background-color: rgb(56,102,125);
-  border-color: rgb(56,102,125);
+  background-color: #EF626C;
+  border-color: #84DCCF;
 }
 
 .navbar-inverse {
-  background-color: rgb(174, 203, 209);
-  border-color: rgb(56,102,125);
+  background-color: #84DCCF;
+  border-color: #EF626C;
 }
 .navbar-inverse .navbar-brand {
-  color: #fdfdfd;
+  color:  #EF626C;
 }
 .navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
-  color: rgb(174, 203, 209);
+  color:  #EF626C);
 }
 .navbar-inverse .navbar-text {
   color: #fdfdfd;
@@ -79,15 +87,15 @@ a{
   color: rgb(174, 203, 209);
 }
 .navbar-inverse .navbar-nav > li > .dropdown-menu {
-  background-color: #8CC3C8;
+  background-color:  #EF626C;
 }
 .navbar-inverse .navbar-nav > li > .dropdown-menu > li > a {
-  color: #8CC3C8;
+  color:  #EF626C;
 }
 .navbar-inverse .navbar-nav > li > .dropdown-menu > li > a:hover,
 .navbar-inverse .navbar-nav > li > .dropdown-menu > li > a:focus {
-  color:  #8CC3C8;
-  background-color: #8CC3C8;
+  color:   #EF626C;
+  background-color:  #EF626C;
 }
 .navbar-inverse .navbar-nav > li > .dropdown-menu > li > .divider {
   background-color: #8CC3C8;
@@ -101,13 +109,13 @@ a{
   background-color:rgb(56,102,125);
 }
 .navbar-inverse .navbar-toggle {
-  border-color: rgb(56,102,125);
+  border-color: #EF626C;
 }
 .navbar-inverse .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-  background-color: rgb(56,102,125);
+  background-color: #EF626C;
 }
 .navbar-inverse .navbar-toggle .icon-bar {
-  background-color: #fdfdfd;
+  background-color: #FFFFFF;
 }
 .navbar-inverse .navbar-collapse,
 .navbar-inverse .navbar-form {
@@ -117,7 +125,7 @@ a{
   color: #fdfdfd;
 }
 .navbar-inverse .navbar-link:hover {
-  color:rgb(249, 207, 193);
+  color:#84DCCF;
 }
 
 @media (max-width: 767px) {
@@ -125,11 +133,11 @@ a{
     color: #fdfdfd;
   }
   .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #86c767;
+    color: #EF626C;
   }
   .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color:  rgb(160,180,181);
-    background-color: #2d4026;
+    color: #EF626C;
+    background-color: #EF626C;
   }
 }
 
@@ -148,12 +156,26 @@ h2
 .customheader {
   font-family: 'Ubuntu', sans-serif;
   font-weight: bold;
-  color : MintCream ;
+  color : #22181C ;
   text-shadow: white;
 }
 
+.btn-default {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  text-color : #FFFFFF ;
+  text-shadow: #84DCCF;
+}
+
+.btn-primary {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: bold;
+  color : #FFFFFF ;
+  text-shadow: #84DCCF;
+}
+
 .jumbotron {
-    background: url("../images/country3-custom.JPG") no-repeat center fixed ;
+    background: #84DCCF no-repeat center fixed ;
     -webkit-background-size: cover; /* pour Chrome et Safari */
     -moz-background-size: cover; /* pour Firefox */
     -o-background-size: cover; /* pour Opera */
