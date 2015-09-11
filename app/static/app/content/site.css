@@ -1,8 +1,8 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-color: #EF626C;
-    background: linear-gradient(#84DCCF, #84DCCF, #EF626C);
+    background-color: #EF626C no-repeat center fixed ;
+    background: linear-gradient(#84DCCF, #84DCCF, #EF626C) no-repeat center fixed ;
 }
 
 .th_contact010
@@ -12,6 +12,16 @@ padding:2rem;
 width:33.3%;
 font:calibri;
 border-bottom:1px solid #84DCCF;
+}
+
+.dropdown-menu
+{
+    min-width: 100%;
+}
+
+.btn-default
+{
+    min-width: 100%;
 }
 
 .th_contact011
