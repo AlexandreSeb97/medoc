@@ -5,33 +5,34 @@
 <div class="jumbotron">
     <h1>MeDOC</h1>
     <p class="lead">Cette application a ete créée en utilisant Python et Django. </p>
-	
+
     <p><a class="btn btn-default" href="{% url 'medoc' %}">Demarrez! &raquo;</a></p>
 	<br />
 	<h6> Photo by Alexandre </h6>
-    
+
 </div>
 
-
+<div class="jumbotron jumbotron-second">
 <div class="row">
     <div class="col-md-4">
-        <h2>Hopitaux</h2>
-        <p>
-            Voyez les hopitaux proches de vous
+        <h2 class="customheader">Hopitaux</h2>
+        <p class="lead2">
+           Les hopitaux proches de vous
         </p>
         <p><a href="{% url 'hospital_fr' %}" class="btn btn-primary btn-large">Hopitaux &raquo;</a></p>
-        
+
     </div>
     <div class="col-md-4">
-        <h2>Contactez nous!</h2>
-        <p>Contactez les developpeurs</p>
+        <h2 class="customheader">Contactez nous!</h2>
+        <p class="lead2">Contactez les developpeurs</p>
         <p><a class="btn btn-default" href="{% url 'contact_fr' %}">Contact &raquo;</a></p>
     </div>
     <div class="col-md-4">
-        <h2>A Propos</h2>
-        <p>Apprenez en plus sur l'application</p>
+        <h2 class="customheader">A Propos</h2>
+        <p class="lead2">Apprenez en plus sur l'application</p>
         <p><a class="btn btn-default" href="{% url 'about_fr' %}">A Propos &raquo;</a></p>
     </div>
+</div>
 </div>
 
 

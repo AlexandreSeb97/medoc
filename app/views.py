@@ -100,8 +100,6 @@ def home(request):
         })
     )
 
-
-
 def _en(request):
     """Renders english home page."""
     assert isinstance(request, HttpRequest)
