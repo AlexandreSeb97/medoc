@@ -97,66 +97,139 @@ google.maps.event.addDomListener(window, 'load', initialize);
     <p id="error"></p>
 
 
-<div class="panel panel-primary">
-	<div class="panel-heading">
-	    <h3 class="panel-title">Lopital ki fyab</h3>
+    <div class="panel panel-primary">
+    	<div class="panel-body">
+    <div class="dropdown">
+      <button class="btn btn-default btn-lg dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        Centre-Ville
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        {% for hospital in hospitals %}
+          {% if hospital.quartier == "Centre-Ville Port-au-Prince" %}
+        <li><a href="#">
+          {{ hospital.nom }}
+          {{ hospital.specialite }}
+              </br> {{ hospital.adresse }} --- Phone:{{ hospital.phone_number1 }} // {{ hospital.phone_number2 }}
+          </h4>
+        </a></li>
+        {% endif %}
+    {% endfor %}
+      </ul>
+    </div>
 
-	<div class="panel-body">
-<h1 class="hospital" > Nan Delma </h1>
-{% for hospital in hospitals %}
-  {% if hospital.quartier == "Delmas" %}
-  	<div class="Hospital">
-        <h3> {{ hospital.nom }}</h3>
-        <p>{{ hospital.quartier }} --- {{ hospital.adresse }}</p>
-    {% endif %}
-{% endfor %}
-<h1 class ="hospital"> Nan KanapeVè </h1>
-{% for hospital in hospitals %}
-  {% if hospital.quartier == "Canapé-Vert" %}
-  	<div class="Hospital">
-        <h3> {{ hospital.nom }}</h3>
-        <p>{{ hospital.quartier }} --- {{ hospital.adresse }}</p>
-    {% endif %}
-{% endfor %}
-<h1 class ="hospital"> Nan Tijo </h1>
-{% for hospital in hospitals %}
-  {% if hospital.quartier == "Turgeau" %}
-  	<div class="Hospital">
-        <h3> {{ hospital.nom }}</h3>
-        <p>{{ hospital.quartier }} --- {{ hospital.adresse }}</p>
-    {% endif %}
-{% endfor %}
-<h1 class ="hospital"> Nan Pako </h1>
-{% for hospital in hospitals %}
-  {% if hospital.quartier == "Pacot" %}
-  	<div class="Hospital">
-        <h3> {{ hospital.nom }}</h3>
-        <p>{{ hospital.quartier }} --- {{ hospital.adresse }}</p>
-    {% endif %}
-{% endfor %}
-<h1 class ="hospital"> Nan Fèmat </h1>
-{% for hospital in hospitals %}
-  {% if hospital.quartier == "Fermathe" %}
-  	<div class="Hospital">
-        <h3> {{ hospital.nom }}</h3>
-        <p>{{ hospital.quartier }} --- {{ hospital.adresse }}</p>
-    {% endif %}
-{% endfor %}
-<h1 class ="hospital"> Anba Lavil Potoprens </h1>
-{% for hospital in hospitals %}
-  {% if hospital.quartier == "Centre-Ville Port-au-Prince" %}
-  	<div class="Hospital">
-        <h3> {{ hospital.nom }}</h3>
-        <p>{{ hospital.quartier }} --- {{ hospital.adresse }}</p>
-    {% endif %}
-{% endfor %}
+    <div class="dropdown">
+      <button class="btn btn-default btn-lg dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        Delmas
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        {% for hospital in hospitals %}
+          {% if hospital.quartier == "Delmas" %}
+          <li><a href="#">
+            {{ hospital.nom }}
+            {{ hospital.specialite }}
+                </br> {{ hospital.adresse }} --- Phone:{{ hospital.phone_number1 }} // {{ hospital.phone_number2 }}
+            </h4>
+          </a></li>
+        {% endif %}
+    {% endfor %}
+      </ul>
+    </div>
 
+    <div class="dropdown">
+      <button class="btn btn-default btn-lg dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        Canapé-Vert
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        {% for hospital in hospitals %}
+          {% if hospital.quartier == "Canapé-Vert" %}
+          <li><a href="#">
+            {{ hospital.nom }}
+            {{ hospital.specialite }}
+                </br> {{ hospital.adresse }} --- Phone:{{ hospital.phone_number1 }} // {{ hospital.phone_number2 }}
+            </h4>
+          </a></li>
+        {% endif %}
+    {% endfor %}
+      </ul>
+    </div>
 
+    <div class="dropdown">
+      <button class="btn btn-default btn-lg dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        Pacot
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        {% for hospital in hospitals %}
+          {% if hospital.quartier == "Pacot" %}
+          <li><a href="#">
+            {{ hospital.nom }}
+            {{ hospital.specialite }}
+                </br> {{ hospital.adresse }} --- Phone:{{ hospital.phone_number1 }} // {{ hospital.phone_number2 }}
+            </h4>
+          </a></li>
+        {% endif %}
+    {% endfor %}
+      </ul>
+    </div>
 
+    <div class="dropdown">
+      <button class="btn btn-default btn-lg dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        Turgeau
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        {% for hospital in hospitals %}
+          {% if hospital.quartier == "Turgeau" %}
+          <li><a href="#">
+            {{ hospital.nom }}
+            {{ hospital.specialite }}
+                </br> {{ hospital.adresse }} --- Phone:{{ hospital.phone_number1 }} // {{ hospital.phone_number2 }}
+            </h4>
+          </a></li>
+        {% endif %}
+    {% endfor %}
+      </ul>
+    </div>
 
+    <div class="dropdown">
+      <button class="btn btn-default btn-lg dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        Fermathe
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        {% for hospital in hospitals %}
+          {% if hospital.quartier == "Fermathe" %}
+          <li><a href="#">
+            {{ hospital.nom }}
+            {{ hospital.specialite }}
+                </br> {{ hospital.adresse }} --- Phone:{{ hospital.phone_number1 }} // {{ hospital.phone_number2 }}
+            </h4>
+          </a></li>
+        {% endif %}
+    {% endfor %}
+      </ul>
+    </div>
 
-</div>
-</div>
+    <div class="dropdown">
+      <button class="btn btn-default btn-lg dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        Bois-Verna
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        {% for hospital in hospitals %}
+          {% if hospital.quartier == "Bois-Verna" %}
+          <li><a href="#">
+            {{ hospital.nom }}
+            {{ hospital.specialite }}
+                </br> {{ hospital.adresse }} --- Phone:{{ hospital.phone_number1 }} // {{ hospital.phone_number2 }}
+            </h4>
+          </a></li>
+        {% endif %}
+    {% endfor %}
+      </ul>
 </div>
 
 {% endblock %}

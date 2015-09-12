@@ -24,6 +24,11 @@ border-bottom:1px solid #84DCCF;
     min-width: 100%;
 }
 
+.btn-primary
+{
+    min-width: 100%;
+}
+
 .th_contact011
 {
 background: white;
