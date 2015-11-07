@@ -2,7 +2,7 @@
     padding-top: 50px;
     padding-bottom: 20px;
     background-color: #EF626C no-repeat center fixed ;
-    background: linear-gradient(#84DCCF, #84DCCF, #EF626C) no-repeat center fixed ;
+    background: linear-gradient(#84DCCF, #84DCCF, #B5EAE2, #EF626C) no-repeat center fixed ;
 }
 
 .th_contact010
@@ -174,7 +174,7 @@ a{
 {
   border-bottom: 3px solid rgba(160,180,181, 0.74);
   padding-bottom: 3px;
-  color: #EF626C;
+  color: MintCream;
 }
 h2
 {
@@ -203,7 +203,7 @@ h2
 }
 
 .jumbotron {
-    background: #84DCCF no-repeat center fixed ;
+    background: #EF626C no-repeat center fixed ;
     -webkit-background-size: cover; /* pour Chrome et Safari */
     -moz-background-size: cover; /* pour Firefox */
     -o-background-size: cover; /* pour Opera */
@@ -213,7 +213,7 @@ h2
 
 .jumbotron-second
  {
-  background: #FFFFFF no-repeat center fixed ;
+  background: #84DCCF no-repeat center fixed ;
   -webkit-background-size: cover; /* pour Chrome et Safari */
   -moz-background-size: cover; /* pour Firefox */
   -o-background-size: cover; /* pour Opera */
