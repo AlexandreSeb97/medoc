@@ -151,8 +151,8 @@ def contact(request):
         'app/contact.html',
         context_instance = RequestContext(request,
         {
-            'title':'Contact',
-            'message':'Having trouble with the app? Contact us!',
+            'title':'Who are we?',
+            'message':'Learn about the men behind MeDOC and SHHARPRISE',
             'year':datetime.now().year,
         })
     )
