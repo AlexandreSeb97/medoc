@@ -262,3 +262,7 @@ input[type="checkbox"].input-validation-error {
 .img-circle {
   border-radius: 50%
 }
+
+.div {
+  width: auto;
+}
