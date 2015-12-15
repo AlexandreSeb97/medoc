@@ -152,7 +152,7 @@ def contact(request):
         context_instance = RequestContext(request,
         {
             'title':'Who are we?',
-            'message':'Learn about the men behind MeDOC and SHHARPRISE',
+            'message':'Learn about the men behind MeDOC and SHARPRISE',
             'year':datetime.now().year,
         })
     )
