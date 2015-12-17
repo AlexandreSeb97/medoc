@@ -1,23 +1,67 @@
 {% extends "app/kr/layout_kr.html" %}
 
 {% block content %}
+{% load staticfiles %}
+<center><h2 class="customheader">{{ title }}</h2></center>
+<center><p>{{ message }}</p></center>
 
-<h2>{{ title }}.</h2>
-<h3>{{ message }}</h3>
+<div class="tabs">
+<table class="bodydiv" align="center">
+	<tr>
+	<th class="th_contact010">
+	<img width="60%"  class="img-circle" src="{% static 'app/images/Alexandre.jpg' %}"></th>
 
-<address>
-    Enstitisyon Sen-Lwi Gonzag<br />
-    Potoprens, HT Delmas 31<br />
+<td>
+	<th class="th_contact010">
+	<img width="60%"  class="img-circle" src="{% static 'app/images/Vales.jpg' %}"></th>
+</td>
+
+<td>
+	<th class="th_contact010">
+	<img width="60%"  class="img-circle" src="{% static 'app/images/Henri.JPG' %}"></th>
+</td></tr>
+
+
+<tr>	<th class="th_contact02">
+	<i><p> Alexandre Erich Sébastien GEORGES	 </p></i>
+	<p>&nbsp;</p>
+	<p> Lead Designer and Coder </p>
+	<address>
+    Port-au-Prince, HT <br />
     <abbr title="Phone">P:</abbr>
     509.3125.3334
 </address>
+</th>
 
-<br /><h2> EMAIL </h2>
+<td>
+<th class="th_contact02">
+<i><p> Riccardy VALES	 </p></i>
+<p>&nbsp;</p>
+<p> Coder </p>
 <address>
-<h3> Ou ka kontakte n' nan youn nan email sa yo, n'ap fe tout sa n' kapab pou n' reponn nou byen vit.</h2>
-    <strong>Support:</strong>   <a href="mailto:erichaitian97@gmail.com">erichaitian97@gmail.com</a><br />
- <strong>Support:</strong>   <a href="mailto:vales0797@gmail.com">vales0797@gmail.com</a><br />
-  <strong>Support:</strong>   <a href="mailto:patrickjuniora@yahoo.fr">patrickjuniora@yahoo.fr</a><br />
+	Port-au-Prince, HT <br />
+	<abbr title="Phone">P:</abbr>
+	509.3731.1824
 </address>
+</th></td>
+
+<td>
+<th class="th_contact02">
+<i><p> Henri Edouard FRANCOIS	 </p></i>
+<p>&nbsp;</p>
+<p> Coder </p>
+<address>
+	Port-au-Prince, HT <br />
+	<abbr title="Phone">P:</abbr>
+	509.3104.7251
+</address>
+</th></td></tr>
+</table>
+
+
+	<p>&nbsp;</p>
+
+<br />
+</div>
 <br /><br /><br /><br /><br />
 {% endblock %}
