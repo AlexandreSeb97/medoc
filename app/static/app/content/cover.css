@@ -45,7 +45,7 @@ html,
 body {
 
   background-color: #84DCCF;
-   background-image:  linear-gradient(#84DCCF, #EF626C);
+   background-image:  linear-gradient(#84DCCF, #84DCCF, #EF626C, #EF626C);
 }
 body {
   color: #fff;

@@ -2,7 +2,7 @@
     padding-top: 50px;
     padding-bottom: 20px;
     background-color: #EF626C no-repeat center fixed ;
-    background: linear-gradient(#84DCCF, #84DCCF, #B5EAE2, #EF626C) no-repeat center fixed ;
+    background: linear-gradient(#EF626C, #EF626C, #84DCCF, #84DCCF) no-repeat center fixed ;
 }
 
 .title {
@@ -14,7 +14,7 @@
 {
 background: #EF626C;
 padding:2rem;
-width:auto;
+width:30%;
 font:calibri;
 border-bottom:1px solid #84DCCF;
 }
@@ -23,7 +23,7 @@ border-bottom:1px solid #84DCCF;
 {
 background: white;
 padding:2rem;
-width:auto;
+width:30%;
 font:'Ubuntu', sans-serif;
 border-bottom:1px solid #B5EAE2;
 }
@@ -33,8 +33,12 @@ border-bottom:1px solid #B5EAE2;
 background-color:#84DCCF;
 border-radius:0 0 12px 12px;
 padding:2rem;
-width:auto;
+width:30%;
 font:'Ubuntu', sans-serif;
+}
+
+.bodydiv {
+  width: auto;
 }
 
 .dropdown-menu
