@@ -167,12 +167,13 @@ $(document).ready(function () {
   </head>
   <body>
 
+<div class="panel panel-primary">
+  <div class="panel-body">
 <div id="hospital-page">
     <div id="map-canvas"></div>
     <p id="error"></p>
 
-<div class="panel panel-primary">
-	<div class="panel-body">
+
 <div class="dropdown">
   <button class="btn btn-default btn-lg dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
     Downtown PAP
@@ -203,7 +204,7 @@ $(document).ready(function () {
       <li><a href="#">
         {{ hospital.nom }}
         {{ hospital.specialite }}
-            </br> {{ hospital.adresse }} --- Phone:{{ hospital.phone_number1 }} // {{ hospital.phone_number2 }}
+      </br> {{ hospital.adresse }} </br> Phone:{{ hospital.phone_number1 }} // {{ hospital.phone_number2 }}
         </h4>
       </a></li>
     {% endif %}
@@ -222,7 +223,7 @@ $(document).ready(function () {
       <li><a href="#">
         {{ hospital.nom }}
         {{ hospital.specialite }}
-            </br> {{ hospital.adresse }} --- Phone:{{ hospital.phone_number1 }} // {{ hospital.phone_number2 }}
+      </br> {{ hospital.adresse }} </br> Phone:{{ hospital.phone_number1 }} // {{ hospital.phone_number2 }}
         </h4>
       </a></li>
     {% endif %}
@@ -241,7 +242,7 @@ $(document).ready(function () {
       <li><a href="#">
         {{ hospital.nom }}
         {{ hospital.specialite }}
-            </br> {{ hospital.adresse }} --- Phone:{{ hospital.phone_number1 }} // {{ hospital.phone_number2 }}
+      </br> {{ hospital.adresse }} </br> Phone:{{ hospital.phone_number1 }} // {{ hospital.phone_number2 }}
         </h4>
       </a></li>
     {% endif %}
@@ -260,7 +261,7 @@ $(document).ready(function () {
       <li><a href="#">
         {{ hospital.nom }}
         {{ hospital.specialite }}
-            </br> {{ hospital.adresse }} --- Phone:{{ hospital.phone_number1 }} // {{ hospital.phone_number2 }}
+      </br> {{ hospital.adresse }} </br> Phone:{{ hospital.phone_number1 }} // {{ hospital.phone_number2 }}
         </h4>
       </a></li>
     {% endif %}
@@ -279,7 +280,7 @@ $(document).ready(function () {
       <li><a href="#">
         {{ hospital.nom }}
         {{ hospital.specialite }}
-            </br> {{ hospital.adresse }} --- Phone:{{ hospital.phone_number1 }} // {{ hospital.phone_number2 }}
+      </br> {{ hospital.adresse }} </br> Phone:{{ hospital.phone_number1 }} // {{ hospital.phone_number2 }}
         </h4>
       </a></li>
     {% endif %}
@@ -295,10 +296,10 @@ $(document).ready(function () {
   <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
     {% for hospital in hospitals %}
       {% if hospital.quartier == "Bois-Verna" %}
-      <li><a href="#">
+      <li><a id="droptext" href="#">
         {{ hospital.nom }}
         {{ hospital.specialite }}
-            </br> {{ hospital.adresse }} --- Phone:{{ hospital.phone_number1 }} // {{ hospital.phone_number2 }}
+      </br> {{ hospital.adresse }} </br> Phone:{{ hospital.phone_number1 }} // {{ hospital.phone_number2 }}
         </h4>
       </a></li>
     {% endif %}

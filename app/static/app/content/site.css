@@ -13,10 +13,10 @@
 .th_contact010
 {
 background: #EF626C;
-padding:2rem;
+padding: inherit;
 width:30%;
-font:calibri;
-border-bottom:1px solid #84DCCF;
+font:'Ubuntu', sans-serif;
+border-bottom:5px solid #84DCCF;
 }
 
 .th_contact011
@@ -25,7 +25,7 @@ background: white;
 padding:2rem;
 width:30%;
 font:'Ubuntu', sans-serif;
-border-bottom:1px solid #B5EAE2;
+border-bottom:5px solid #B5EAE2;
 }
 
 .th_contact02
@@ -37,13 +37,23 @@ width:30%;
 font:'Ubuntu', sans-serif;
 }
 
+.contact_text{
+  font-size: 13px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
 .bodydiv {
   width: auto;
 }
 
 .dropdown-menu
 {
-    min-width: 100%;
+    width: 100%;
+    color: #84DCCF;
+}
+
+.droptext {
+  font-size: 10px;
 }
 
 .btn-default
@@ -69,7 +79,7 @@ font:'Ubuntu', sans-serif;
 .panel-primary
 {
     background-color: #84DCCF;
-    border: 5px solid #FFFFFF;
+    border: 2px solid #FFFFFF;
 }
 
 .hospital {
