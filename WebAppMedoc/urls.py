@@ -6,6 +6,7 @@ from datetime import datetime
 from django.conf.urls import patterns, url, include
 from app.forms import BootstrapAuthenticationForm
 from organizations.backends import invitation_backend
+from django.contrib import admin
 
 # Uncomment the next lines to enable the admin:
 # from django.conf.urls import include
@@ -15,6 +16,8 @@ from organizations.backends import invitation_backend
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'app.views.home', name='home'),
+    url(r'^auth_login/$', 'app.views.auth_login', name="auth_login"),
+    url(r'^register/$', 'app.views.auth_register', name="register"),
 	url(r'^hospital$', 'app.views.hospital', name='hospital'),
 	url(r'^hospital_fr$', 'app.views.hospital_fr', name='hospital_fr'),
 	url(r'^hospital_kr$', 'app.views.hospital_kr', name='hospital_kr'),

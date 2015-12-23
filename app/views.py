@@ -8,6 +8,12 @@ from django.template import RequestContext
 from datetime import datetime
 from app.models import Doctor
 from app.models import Hospital
+from django.shortcuts import render, HttpResponseRedirect, redirect
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
+from django.core.urlresolvers import reverse
+from app.forms import RegisterForm, LoginForm, UserChangeForm
+from app.models import MyDoctor
 
 def hospital(request):
     """ Afficher tous les hopitaux de notre blog """
@@ -229,17 +235,17 @@ def about_fr(request):
 
 def _head(request):
 	""" Afficher tous les medecins de notre database """
-	doctor = Doctor.objects.all()
+	mydoctor = MyDoctor.objects.all()
 	"""Renders the medoc page."""
 	assert isinstance(request, HttpRequest)
 	return render(
 		request,
 		'app/head.html',
-		{'doctors': doctor},
+		{'mydoctors': mydoctor},
 		context_instance = RequestContext(request,
 		{
-			'title':'Docs in Haiti',
-			'message':'How do you feel today?',
+			'title':'Registered Docs',
+			'message':'Docs registered with us and ready to serve you!',
 			'year':datetime.now().year,
 		})
 	)
@@ -305,3 +311,55 @@ def head_fr(request):
 			'year':datetime.now().year,
 		})
 	)
+
+def auth_login(request):
+	form = LoginForm(request.POST or None)
+	next_url = request.GET.get('next')
+	if form.is_valid():
+		name = form.cleaned_data['name']
+		password = form.cleaned_data['password']
+		user = authenticate(name=name, password=password)
+		if user is not None:
+			login(request, user)
+			if next_url is not None:
+				return HttpResponseRedirect(next_url)
+			return HttpResponseRedirect("/create")
+	action_url = reverse("login")
+	title = "Login"
+	submit_btn = title
+	submit_btn_class = "btn-success btn-block"
+	context = {
+		"form": form,
+		"action_url": action_url,
+		"title": 'Log in',
+		"submit_btn": submit_btn,
+		"submit_btn_class": submit_btn_class,
+		}
+	return render(request, "app/account/account_login.html", context)
+
+def auth_register(request):
+
+	form = RegisterForm(request.POST or None)
+	if form.is_valid():
+		name = form.cleaned_data['name']
+		email = form.cleaned_data['email']
+		password = form.cleaned_data['password2']
+		#MyUser.objects.create_user(name=name, email=email, password=password)
+		new_user = MyDoctor()
+		new_user.name = name
+		new_user.email = email
+		#new_user.password = password #WRONG
+		new_user.set_password(password) #RIGHT
+		new_user.save()
+
+	action_url = reverse("register")
+	title = "Register"
+	submit_btn = "Create free account"
+
+	context = {
+		"form": form,
+		"action_url": action_url,
+		"title": 'Register now!',
+		"submit_btn": submit_btn
+		}
+	return render(request, "app/account/account_register.html", context)

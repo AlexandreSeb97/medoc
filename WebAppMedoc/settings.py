@@ -13,6 +13,8 @@ ALLOWED_HOSTS = (
     'localhost',
 )
 
+AUTH_USER_MODEL = 'app.MyDoctor'
+
 ADMINS = (
      'Alexandre', 'erichaitian97@gmail.com'
 )

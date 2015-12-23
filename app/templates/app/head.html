@@ -10,28 +10,16 @@
             </div>
        <div class="panel panel-primary">
 	<div class="panel-heading">
-	    <h2 class="panel-title">Here is a list of specialized doctors.</h2>
-<h1 class="hospital" > Pediatres </h1>
-  {% for doctor in doctors %}
-    {% if doctor.country == "Haiti" %}
-      {% elif doctor.specialite == "Pediatrie" %}
+	    <h2 class="panel-title">List of our registered Docs.</h2>
+<h1 class="hospital" > Docs </h1>
+  {% for mydoctor in mydoctors %}
+    {% if mydoctor.country == "Haiti" %}
   	   <div class="Doctor">
-         <h3> {{ doctor.nom }}</h3>
-        <p> {{ doctor.adresse }} ---  {{ doctor.phone_number }}</p>
-    {% endif %}
+         <h3> {{ mydoctor.name }}</h3>
+        <p> {{ mydoctor.email }} -- {{ mydoctor.specialite }} </p>
+        {% endif %}
 {% endfor %}
-<h1 class="hospital" > Generaliste </h1>
-  {% for doctor in doctors %}
-  {% if doctor.country == "Haiti" %}
-  {% elif doctor.specialite == "Generaliste" %}
-  	<div class="Doctor">
-   <h3> {{ doctor.nom }}</h3>
-        <p> {{ doctor.adresse }} ---  {{ doctor.phone_number }}</p>
-
-    {% endif %}
-{% endfor %}
-
-            </div></div></div>
+</div></div>
 
 
 {% endblock %}
