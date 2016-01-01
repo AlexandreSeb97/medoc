@@ -245,7 +245,8 @@ def _head(request):
 		context_instance = RequestContext(request,
 		{
 			'title':'Registered Docs',
-			'message':'Docs registered with us and ready to serve you!',
+			'message':"Docs registered with us and ready to serve you!",
+            'todocs': "Are you doctor and aren't registed yet? Click on the button below!",
 			'year':datetime.now().year,
 		})
 	)
@@ -359,7 +360,7 @@ def auth_register(request):
 	action_url = reverse("register")
 	title = "Register"
 	submit_btn = "Create free account"
-    
+
 	context = {
 		"form": form,
 		"action_url": action_url,

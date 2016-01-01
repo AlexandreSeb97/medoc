@@ -71,6 +71,11 @@ font:'Ubuntu', sans-serif;
   background-color: #84DCCF;
 }
 
+.panel-medoc {
+  background-color: #EF626C;
+  border: 2px solid #FFFFFF;
+}
+
 .panel
 {
     background-color: #84DCCF;
