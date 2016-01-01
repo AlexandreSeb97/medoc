@@ -342,12 +342,16 @@ def auth_register(request):
 	form = RegisterForm(request.POST or None)
 	if form.is_valid():
 		name = form.cleaned_data['name']
+		country = form.cleaned_data['country']
+		specialite = form.cleaned_data['specialite']
 		email = form.cleaned_data['email']
 		password = form.cleaned_data['password2']
-		#MyUser.objects.create_user(name=name, email=email, password=password)
+		#MyUser.objects.create_user(name=name, email=email, password=password, country=country, specialite=specialite)
 		new_user = MyDoctor()
 		new_user.name = name
 		new_user.email = email
+		new_user.country = country
+		new_user.specialite = specialite
 		#new_user.password = password #WRONG
 		new_user.set_password(password) #RIGHT
 		new_user.save()
@@ -355,7 +359,7 @@ def auth_register(request):
 	action_url = reverse("register")
 	title = "Register"
 	submit_btn = "Create free account"
-
+    
 	context = {
 		"form": form,
 		"action_url": action_url,
